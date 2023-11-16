@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Waffe
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Background
+  - Vorne
+  - Player
+  - Enemy
+  - Playerbullet
+  - Hitbox
+  - EnemyBullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background 5
+    uniqueID: 1060274233
+    locked: 0
+  - name: Background 4
+    uniqueID: 2144671083
+    locked: 0
+  - name: Background 3
+    uniqueID: 3390718091
+    locked: 0
+  - name: Background 2
+    uniqueID: 3502654815
+    locked: 0
+  - name: Background vorne
+    uniqueID: 90627843
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Myst
+    uniqueID: 4290040093
+    locked: 0
