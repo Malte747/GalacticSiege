@@ -37,6 +37,12 @@ void Update()
         {
             health.TakeDamage(damage);
         }
+
+        CityHallHealth Leben = hitInfo.GetComponent<CityHallHealth>();
+        if (Leben != null)
+        {
+            Leben.TakeDamage(damage);
+        }
        
 
         Instantiate(impactEffect, transform.position, transform.rotation);

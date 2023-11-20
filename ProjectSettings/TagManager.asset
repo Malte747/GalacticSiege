@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Waffe
   - Enemy
+  - City Hall
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Playerbullet
   - Hitbox
   - EnemyBullet
-  - 
+  - City Hall
   - 
   - 
   - 

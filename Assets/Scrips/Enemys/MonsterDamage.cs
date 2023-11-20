@@ -5,11 +5,14 @@ using UnityEngine;
 public class MonsterDamage : MonoBehaviour
 {
     public int damage;
-    public PlayerHealth playerHealth;
-    public PlayerRun playerMovement;
+   
 
 private void OnCollisionEnter2D(Collision2D collision)
 {
+    PlayerRun playerMovement = collision.gameObject.GetComponent<PlayerRun>();
+    PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+     CityHallHealth cityHallHeath = collision.gameObject.GetComponent<CityHallHealth>();
+
     if(collision.gameObject.tag == "Player")
     {
         playerMovement.KBCounter = playerMovement.KBTotalTime;
@@ -22,6 +25,11 @@ private void OnCollisionEnter2D(Collision2D collision)
             playerMovement.KnockFromRight = false;
         } 
         playerHealth.TakeDamage(damage);
+    }
+    if(collision.gameObject.tag == "City Hall")
+    { 
+        cityHallHeath.TakeDamage(damage);
+       
     }
 }
 

@@ -25,4 +25,14 @@ public class PlayerHealth : MonoBehaviour
         }
         HealthBar.SetHealth(health);
     }
+
+      public void Heal(int healing)
+    {
+        health += healing;
+         if(health >= 100)
+        {
+            HealthBar.SetMaxHealth(maxHealth);
+        }
+        HealthBar.SetHealth(health);
+    }
 }

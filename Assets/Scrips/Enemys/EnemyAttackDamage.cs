@@ -5,21 +5,21 @@ using UnityEngine;
 public class EnemyAttackDamage : MonoBehaviour
 {
     public int damage;
-    public PlayerHealth playerHealth;
-    public PlayerRun playerMovement;
-
-private void OnTriggerEnter2D(Collider2D other)
-{
-    
-
-{
-    if(other.CompareTag("Player"))
+  void OnTriggerEnter2D (Collider2D hitInfo) 
     {
+        PlayerHealth health = hitInfo.GetComponent<PlayerHealth>();
+        if (health != null)
+        {
+            health.TakeDamage(damage);
+        }
 
-        playerHealth.TakeDamage(damage);
+        CityHallHealth Leben = hitInfo.GetComponent<CityHallHealth>();
+        if (Leben != null)
+        {
+            Leben.TakeDamage(damage);
+        }
+       
+
+       
     }
-}
-
-
-}
 }

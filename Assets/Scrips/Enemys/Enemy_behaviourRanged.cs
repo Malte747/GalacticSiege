@@ -73,6 +73,12 @@ public class Enemy_behaviourRanged : MonoBehaviour
             target = trig.gameObject;
             inRange = true;
         }
+        
+        if(trig.gameObject.tag == "City Hall")
+        {
+            target = trig.gameObject;
+            inRange = true;
+        }
     }
 
     void EnemyLogic()
