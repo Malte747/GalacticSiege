@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CityHallHealth : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class CityHallHealth : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadSceneAsync(1);
         }
         HealthBar.SetHealth(health);
     }

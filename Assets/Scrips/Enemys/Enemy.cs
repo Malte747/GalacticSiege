@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,7 +34,6 @@ public class Enemy : MonoBehaviour
     if(randomNumber <= 100)
     {
         Instantiate(drop, transform.position, Quaternion.identity);
-        Debug.Log("1");
     }
     }
         HealthBar.SetHealth(health);
@@ -43,7 +41,6 @@ public class Enemy : MonoBehaviour
 
    void Die ()
    {
-    
     Instantiate(deathEffect, transform.position, Quaternion.identity);
     Destroy(gameObject);
    }
