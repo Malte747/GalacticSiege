@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
         Die();
 
     int randomNumber = Random.Range(1, 101);
-    if(randomNumber <= 100)
+    if(randomNumber <= 10)
     {
         Instantiate(drop, transform.position, Quaternion.identity);
     }

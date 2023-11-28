@@ -9,12 +9,16 @@ public class weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public float firerate;
     float nextfire;
-   
+    private Animator anim;
+    
 
 
+ void Awake()
+    {
+       
+        anim = GetComponent<Animator>();
 
-
-
+    }
 
 
     void Update()
@@ -22,7 +26,6 @@ public class weapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
-            
            
         }
       
@@ -35,10 +38,13 @@ public class weapon : MonoBehaviour
         if (Time.time > nextfire)
         {
             nextfire = Time.time + firerate;
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);    
+            anim.SetTrigger("Reloading");
         }
         
+        
+        
     }
+
 
 }

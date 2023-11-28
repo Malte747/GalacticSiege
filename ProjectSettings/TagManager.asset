@@ -62,3 +62,9 @@ TagManager:
   - name: Myst
     uniqueID: 4290040093
     locked: 0
+  - name: Player
+    uniqueID: 4260200239
+    locked: 0
+  - name: Enemy
+    uniqueID: 2382901349
+    locked: 0

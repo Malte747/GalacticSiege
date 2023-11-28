@@ -22,7 +22,6 @@ public class WinGame : MonoBehaviour
     }
     void Update()
     {
-      
 
         if(WaveSpawner.WinActive && WaveSpawner2.WinActive && WaveSpawner3.WinActive && !GameOver)
         {
