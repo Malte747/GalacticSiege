@@ -1020,10 +1020,10 @@ MonoBehaviour:
   rayCast: {fileID: 511283060918129393}
   raycastMask:
     serializedVersion: 2
-    m_Bits: 8448
+    m_Bits: 24832
   rayCastLength: 6
   attackDistance: 1
-  moveSpeed: 3
+  moveSpeed: 2.5
   timer: 2
   patrolDestination: 0
   patrolPoints:

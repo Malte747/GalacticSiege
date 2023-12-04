@@ -43,6 +43,11 @@ void Update()
         {
             Leben.TakeDamage(damage);
         }
+         AllieHealth allieHealth = hitInfo.GetComponent<AllieHealth>();
+        if (allieHealth != null)
+        {
+            allieHealth.TakeDamage(damage);
+        }
        
 
         Instantiate(impactEffect, transform.position, transform.rotation);

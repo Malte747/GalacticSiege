@@ -18,7 +18,11 @@ public class EnemyAttackDamage : MonoBehaviour
         {
             Leben.TakeDamage(damage);
         }
-       
+         AllieHealth alliehealth = hitInfo.GetComponent<AllieHealth>();
+        if (alliehealth != null)
+        {
+            alliehealth.TakeDamage(damage);
+        }
 
        
     }

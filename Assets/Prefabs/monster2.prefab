@@ -575,11 +575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: daee4106c5e65984c93a059152123d5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4818525
+      value: 1.1613762
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: daee4106c5e65984c93a059152123d5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.7843437
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: daee4106c5e65984c93a059152123d5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -952,7 +952,7 @@ MonoBehaviour:
   rayCast: {fileID: 3282216992411536805}
   raycastMask:
     serializedVersion: 2
-    m_Bits: 8448
+    m_Bits: 24832
   rayCastLength: 8
   attackDistance: 8
   moveSpeed: 2
@@ -995,7 +995,7 @@ MonoBehaviour:
   - {x: -1.2504156, y: 1.9054846, z: 0}
   m_ShapePathHash: 395692641
   m_Mesh: {fileID: 0}
-  m_InstanceId: -66706
+  m_InstanceId: -165874
   m_LocalBounds:
     m_Center: {x: -0.129982, y: 2.5925407, z: 0}
     m_Extent: {x: 1.4841614, y: 1.0398691, z: 0}

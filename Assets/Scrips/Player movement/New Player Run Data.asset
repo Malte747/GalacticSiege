@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcc702f7a281f74abf575360464b51f, type: 3}
   m_Name: New Player Run Data
   m_EditorClassIdentifier: 
-  runMaxSpeed: 10
+  runMaxSpeed: 8
   runAcceleration: 1
-  runAccelAmount: 5
+  runAccelAmount: 6.25
   runDecceleration: 1
-  runDeccelAmount: 5
+  runDeccelAmount: 6.25
   accelInAir: 1
   deccelInAir: 1
   doConserveMomentum: 0

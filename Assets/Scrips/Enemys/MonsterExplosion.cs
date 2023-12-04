@@ -13,6 +13,7 @@ private void OnCollisionEnter2D(Collision2D collision)
             PlayerRun playerMovement = collision.gameObject.GetComponent<PlayerRun>();
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             CityHallHealth cityHallHeath = collision.gameObject.GetComponent<CityHallHealth>();
+            AllieHealth allieHealth = collision.gameObject.GetComponent<AllieHealth>();
 
     if(collision.gameObject.tag == "Player")
     {
@@ -33,6 +34,13 @@ private void OnCollisionEnter2D(Collision2D collision)
     {
         
         cityHallHeath.TakeDamage(damage);
+        Destroy(gameObject);
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+    }
+      if(collision.gameObject.tag == "Allie")
+    {
+        
+        allieHealth.TakeDamage(damage);
         Destroy(gameObject);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
     }
