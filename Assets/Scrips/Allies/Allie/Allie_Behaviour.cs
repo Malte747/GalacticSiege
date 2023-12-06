@@ -16,6 +16,7 @@ public class Allie_Behaviour : MonoBehaviour
     public Transform[] patrolPoints;
     public Transform firePoint;
     public GameObject bulletPrefab;
+     AllieHealth allieHealth;
     #endregion
 
     #region Private Variables
@@ -33,11 +34,15 @@ public class Allie_Behaviour : MonoBehaviour
     {
         intTimer = timer; //Store the inital value of timer
         anim = GetComponent<Animator>();
-
+        allieHealth = GetComponent<AllieHealth>();
     }
 
     void Update()
     {
+        if (allieHealth.Dead == true)
+        {
+            anim.SetTrigger("Death");
+        }
 
         if (cooling)
         {
@@ -50,7 +55,7 @@ public class Allie_Behaviour : MonoBehaviour
 
 
         //When Player is detected
-        if (hit.collider != null)
+        if (hit.collider != null && allieHealth.Dead == false)
         {
             target = hit.collider.gameObject;
             Attack();
@@ -58,11 +63,14 @@ public class Allie_Behaviour : MonoBehaviour
 
         }
 
-        else
+        else if (allieHealth.Dead == false)
         {
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
         }
+
+       
     }
+
     public void Schuss()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

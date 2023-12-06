@@ -432,11 +432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ff31a512c5a7d624ba86aa501178c717, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.79271
+      value: 1.7140574
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ff31a512c5a7d624ba86aa501178c717, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.926709
+      value: -5.7160378
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ff31a512c5a7d624ba86aa501178c717, type: 3}
       propertyPath: m_LocalPosition.z
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e246f032c9af893469e6b1fbf6c83d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 20
   deathEffect: {fileID: 8643999699486152759, guid: 0e7b119dbb4a4b44aa82134bec3e76b3, type: 3}
 --- !u!58 &4966457062490501206
 CircleCollider2D:
@@ -618,7 +618,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 15.976603}
+  m_Offset: {x: 0, y: 13.673352}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -629,7 +629,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.021044, y: 9.861491}
+  m_Size: {x: 10.021044, y: 5.2549915}
   m_EdgeRadius: 0
 --- !u!50 &1395380793674586637
 Rigidbody2D:
@@ -724,7 +724,7 @@ MonoBehaviour:
   - {x: 0.20197532, y: 2.0341108, z: 0}
   m_ShapePathHash: 1577793538
   m_Mesh: {fileID: 0}
-  m_InstanceId: -363150
+  m_InstanceId: -318922
   m_LocalBounds:
     m_Center: {x: 0.020483732, y: 5.40604, z: 0}
     m_Extent: {x: 3.433489, y: 3.3719296, z: 0}

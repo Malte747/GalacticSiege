@@ -11,6 +11,7 @@ public class RageBar : MonoBehaviour
 
     public Transform spawnPoint;
     public GameObject Boxer;
+    public GameObject Kind;
 
 
 
@@ -63,6 +64,26 @@ public class RageBar : MonoBehaviour
         if (Boxer != null && spawnPoint != null)
         {
             Instantiate(Boxer, spawnPoint.position, spawnPoint.rotation);
+        }
+    }
+
+      public void SummonKind(int costKind)
+    {
+        if(costKind <= rage)
+        {
+            rage -= costKind;
+            rageBar.SetRage(rage);
+            SpawnKind();
+        }
+    }
+
+
+
+    public void SpawnKind()
+    {
+        if (Kind != null && spawnPoint != null)
+        {
+            Instantiate(Kind, spawnPoint.position, spawnPoint.rotation);
         }
     }
 }
