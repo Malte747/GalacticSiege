@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  damageCooldown: 0.1
 --- !u!1 &4646559985114715489
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,11 +551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0285134
+      value: 18.52214
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.803
+      value: -5.4060874
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -848,7 +849,7 @@ MonoBehaviour:
   - {x: 1.55857, y: -0.017896652, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -90356
+  m_InstanceId: -22484
   m_LocalBounds:
     m_Center: {x: -0.0826453, y: 3.0798383, z: 0}
     m_Extent: {x: 1.6412153, y: 3.097735, z: 0}

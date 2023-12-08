@@ -13,6 +13,8 @@ public class EnemyBullet : MonoBehaviour
     private float increaseRate = 1f;
     private float baseValue = 2f;
    
+    private bool hasDealtDamage = false;
+     public float damageCooldown = 1.0f;
 
     
 
@@ -33,19 +35,26 @@ void Update()
      void OnTriggerEnter2D (Collider2D hitInfo) 
     {
         PlayerHealth health = hitInfo.GetComponent<PlayerHealth>();
-        if (health != null)
+        if (health != null && !hasDealtDamage)
         {
+            hasDealtDamage = true;
+            Invoke("ResetDamageCooldown", damageCooldown);
             health.TakeDamage(damage);
+         
         }
 
         CityHallHealth Leben = hitInfo.GetComponent<CityHallHealth>();
-        if (Leben != null)
+        if (Leben != null && !hasDealtDamage)
         {
+            hasDealtDamage = true;
+            Invoke("ResetDamageCooldown", damageCooldown);
             Leben.TakeDamage(damage);
         }
          AllieHealth allieHealth = hitInfo.GetComponent<AllieHealth>();
-        if (allieHealth != null)
+        if (allieHealth != null && !hasDealtDamage)
         {
+            hasDealtDamage = true;
+            Invoke("ResetDamageCooldown", damageCooldown);
             allieHealth.TakeDamage(damage);
         }
        
@@ -55,6 +64,11 @@ void Update()
         Destroy(gameObject);
     }
 
+     private void ResetDamageCooldown()
+    {
+        
+        hasDealtDamage = false; // Erlaube erneut Schaden
+    }
 
     void DestroyProjectile()
     {

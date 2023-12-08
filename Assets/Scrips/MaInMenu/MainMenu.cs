@@ -50,11 +50,7 @@ public class MainMenu : MonoBehaviour
     
   }
 
-  public void PlayGame()
-  { 
-    SceneManager.LoadSceneAsync(nextLevel);
-    
-  }
+
 
   public void IncreaseLevel()
     {
@@ -68,23 +64,9 @@ public class MainMenu : MonoBehaviour
     Application.Quit();
   }
 
-  public void NextSequence()
-  {
-    SceneManager.LoadSceneAsync(nextLevel);
-    
-  }
 
-  public void Menu()
-  {
-    SceneManager.LoadSceneAsync(0);
-    
-  }
 
-  public void TryAgain()
-  {
-     SceneManager.LoadSceneAsync(nextLevel);
-     
-  }
+
 
   
 }

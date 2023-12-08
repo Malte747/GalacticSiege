@@ -181,6 +181,7 @@ MonoBehaviour:
   impactEffect: {fileID: 5260914259741140262, guid: 9287bc5a0484e8340bef4d9675dbaf4b, type: 3}
   lifeTime: 3.5
   damage: 20
+  damageCooldown: 1
 --- !u!95 &5111883680033130025
 Animator:
   serializedVersion: 5

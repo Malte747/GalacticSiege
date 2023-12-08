@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: 3
-  LevelText: {fileID: 2719061086443077336, guid: 2fe6fd4ced0315e4787ae343c0c23e17, type: 3}
+  LevelText: {fileID: 0}
   currentLevel: 1

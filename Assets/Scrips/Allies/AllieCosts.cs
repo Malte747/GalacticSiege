@@ -6,6 +6,7 @@ public class AllieCosts : MonoBehaviour
 {
  public int costBoxer = 10;
   public int costKind = 20;
+   public int costRageUpgrade = 40;
  RageBar RageBar;
 
  void Start()
@@ -25,6 +26,11 @@ void Update()
     if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             RageBar.SummonKind(costKind);
+        }
+
+    if (Input.GetKeyDown(KeyCode.E))
+        {
+            RageBar.RageUpgrade(costRageUpgrade);
         }
 }
 

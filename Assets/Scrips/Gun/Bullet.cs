@@ -11,6 +11,10 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
     public float lifeTime;
 
+     private bool hasDealtDamage = false;
+     public float damageCooldown = 1.0f;
+
+
     
 
     void Start()
@@ -24,15 +28,24 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D (Collider2D hitInfo) 
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        if (enemy != null && !hasDealtDamage)
         {
+            hasDealtDamage = true;
+            Invoke("ResetDamageCooldown", damageCooldown);
             enemy.TakeDamage(damage);
+         
         }
        
 
         Instantiate(impactEffect, transform.position, transform.rotation);
 
         Destroy(gameObject);
+    }
+
+    private void ResetDamageCooldown()
+    {
+        
+        hasDealtDamage = false; // Erlaube erneut Schaden
     }
 
 
