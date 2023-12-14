@@ -13,6 +13,7 @@ public class RageBar : MonoBehaviour
     public Transform spawnPoint;
     public GameObject Boxer;
     public GameObject Kind;
+    public GameObject Oma;
     public Image UpgradeReady;
      public Image UpgradedFlame;
     [SerializeField] private bool ragebarUpgraded = false;
@@ -116,6 +117,26 @@ public class RageBar : MonoBehaviour
         if (Kind != null && spawnPoint != null)
         {
             Instantiate(Kind, spawnPoint.position, spawnPoint.rotation);
+        }
+    }
+
+
+
+      public void SummonOma(int costOma)
+    {
+        if(costOma <= rage)
+        {
+            rage -= costOma;
+            rageBar.SetRage(rage);
+            SpawnOma();
+        }
+    }
+
+    public void SpawnOma()
+    {
+        if (Oma != null && spawnPoint != null)
+        {
+            Instantiate(Oma, spawnPoint.position, spawnPoint.rotation);
         }
     }
 }

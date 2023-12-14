@@ -12,14 +12,15 @@ public class Enemy : MonoBehaviour
    public GameObject deathEffect;
    public HealthBar HealthBar;
    public GameObject drop;
-
+   public float ultpoints = 4f;
+   UltBar ultbar;
    
 
     void Start()
     {
         health = maxHealth;
         HealthBar.SetMaxHealth(maxHealth);
-        
+        ultbar = GameObject.Find("GM").GetComponent<UltBar>();
     }
     
    public void TakeDamage (int damage)
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
 
    void Die ()
    {
+    ultbar.PointsAdd(ultpoints);
     Instantiate(deathEffect, transform.position, Quaternion.identity);
     Destroy(gameObject);
    }

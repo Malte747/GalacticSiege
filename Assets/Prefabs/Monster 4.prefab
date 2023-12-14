@@ -751,11 +751,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e31a5b66cffc4c48a6a703c46857f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 50
   health: 0
   deathEffect: {fileID: 5983789192143607874, guid: da847263fde3b494ea6b72666cbd8f26, type: 3}
   HealthBar: {fileID: 4901317196075824293}
   drop: {fileID: 5795207062265305704, guid: 6f4327b06076f074fa8d4e967f544f18, type: 3}
+  ultpoints: 1
 --- !u!114 &957340469897123662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,7 +782,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -814,7 +815,7 @@ MonoBehaviour:
     m_Bits: 24832
   rayCastLength: 6
   attackDistance: 0.5
-  moveSpeed: 3.5
+  moveSpeed: 3
   timer: 0
   patrolDestination: 0
   patrolPoints:

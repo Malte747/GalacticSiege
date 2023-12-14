@@ -28,6 +28,7 @@ public class Allie_Behaviour : MonoBehaviour
     public bool inRange; //Check if Player is in range
     public bool cooling; //Check if Enemy is cooling after attack
     private float intTimer;
+    AllieAttackDamge AllieAttackDamge;
     #endregion
 
     void Awake()
@@ -115,6 +116,15 @@ public class Allie_Behaviour : MonoBehaviour
             Debug.DrawRay(rayCast.position, Vector2.right * rayCastLength, Color.green);
         }
     }
+    
+    public void OmaRastet()
+    {
+        AllieAttackDamge = GameObject.Find("hitboxOma").GetComponent<AllieAttackDamge>();
+        moveSpeed = 3f; 
+        AllieAttackDamge.MoreDmgOma();
+       
+    }
+
 
 }
 

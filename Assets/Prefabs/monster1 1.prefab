@@ -288,7 +288,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 7680
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -682,11 +682,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.080683
+      value: 2.489959
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5433044
+      value: -5.7008576
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_LocalPosition.z
@@ -993,6 +993,7 @@ MonoBehaviour:
   deathEffect: {fileID: 4504016196327909733, guid: db590ace88b0817419fb680463e7404e, type: 3}
   HealthBar: {fileID: 5414892355870537159}
   drop: {fileID: 5795207062265305704, guid: 6f4327b06076f074fa8d4e967f544f18, type: 3}
+  ultpoints: 2
 --- !u!114 &3997372159962722402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1025,7 @@ MonoBehaviour:
     m_Bits: 24832
   rayCastLength: 6
   attackDistance: 1
-  moveSpeed: 2.5
+  moveSpeed: 1.5
   timer: 2
   patrolDestination: 0
   patrolPoints:
@@ -1144,7 +1145,7 @@ MonoBehaviour:
   - {x: 4.187308, y: 0.46460915, z: 0}
   m_ShapePathHash: -2046872556
   m_Mesh: {fileID: 0}
-  m_InstanceId: -4480
+  m_InstanceId: -13476
   m_LocalBounds:
     m_Center: {x: 0.7060113, y: 3.7611506, z: 0}
     m_Extent: {x: 3.4812965, y: 3.2965415, z: 0}

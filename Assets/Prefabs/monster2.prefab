@@ -844,6 +844,7 @@ MonoBehaviour:
   deathEffect: {fileID: 2982759101159270646, guid: d5fd6b4339dd01c43ae23f67d30f7058, type: 3}
   HealthBar: {fileID: 8151100250803044698}
   drop: {fileID: 5795207062265305704, guid: 6f4327b06076f074fa8d4e967f544f18, type: 3}
+  ultpoints: 3
 --- !u!114 &1953889110842084899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +956,7 @@ MonoBehaviour:
     m_Bits: 24832
   rayCastLength: 8
   attackDistance: 8
-  moveSpeed: 2
+  moveSpeed: 1.5
   timer: 3
   patrolDestination: 0
   patrolPoints:

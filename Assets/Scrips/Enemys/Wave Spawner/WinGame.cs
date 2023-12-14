@@ -9,6 +9,7 @@ public class WinGame : MonoBehaviour
     WaveSpawner WaveSpawner;
     WaveSpawner2 WaveSpawner2;
     WaveSpawner3 WaveSpawner3;
+    WaveSpawner4 WaveSpawner4;
     public bool GameOver = false;
 
     void Start() {
@@ -18,12 +19,13 @@ public class WinGame : MonoBehaviour
         WaveSpawner = GetComponent<WaveSpawner>();
         WaveSpawner2 = GetComponent<WaveSpawner2>();
         WaveSpawner3 = GetComponent<WaveSpawner3>();
+        WaveSpawner4 = GetComponent<WaveSpawner4>();
         }
     }
     void Update()
     {
 
-        if(WaveSpawner.WinActive && WaveSpawner2.WinActive && WaveSpawner3.WinActive && !GameOver)
+        if(WaveSpawner.WinActive && WaveSpawner2.WinActive && WaveSpawner3.WinActive && WaveSpawner4.WinActive && !GameOver)
         {
             Win();
             

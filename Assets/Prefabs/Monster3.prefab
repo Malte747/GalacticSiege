@@ -537,6 +537,7 @@ MonoBehaviour:
   deathEffect: {fileID: 8643999699486152759, guid: 0e7b119dbb4a4b44aa82134bec3e76b3, type: 3}
   HealthBar: {fileID: 7504931876118967469}
   drop: {fileID: 5795207062265305704, guid: 6f4327b06076f074fa8d4e967f544f18, type: 3}
+  ultpoints: 2
 --- !u!114 &8880950881801309347
 MonoBehaviour:
   m_ObjectHideFlags: 0

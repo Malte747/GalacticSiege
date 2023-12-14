@@ -25,4 +25,9 @@ public class AllieAttackDamge : MonoBehaviour
     {
         hasDealtDamage = false; // Erlaube erneut Schaden
     }
+
+    public void MoreDmgOma()
+    {
+        damage = 70;
+    }
 }
