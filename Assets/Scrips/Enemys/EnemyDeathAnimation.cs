@@ -6,8 +6,10 @@ public class EnemyDeathAnimation : MonoBehaviour
 {
   public float newYPosition = 5f; // Die neue Y-Position, die du erreichen möchtest.
   public float newXPosition = 0f;
+  
     void Start()
     {
+       
         // Hole die aktuelle Position des GameObjects.
         Vector3 currentPosition = transform.position;
         
@@ -19,8 +21,7 @@ public class EnemyDeathAnimation : MonoBehaviour
         // Setze die Position des GameObjects auf die aktualisierte Position.
         transform.position = currentPosition;
 
-        // Alternativ: Setze nur die Y-Koordinate der Position ohne Zwischenspeicherung.
-        // transform.position = new Vector3(transform.position.x, newYPosition, transform.position.z);
+  
     }
 
          public void Update()

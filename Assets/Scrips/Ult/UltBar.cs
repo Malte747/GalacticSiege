@@ -22,6 +22,8 @@ public class UltBar : MonoBehaviour
     private List<Renderer> objectRenderers = new List<Renderer>();
     private List<Color> originalColors = new List<Color>();
      private Animator anim;
+     private bool ReadySound = false;
+     private AudioManager audioManager;
 
 
 
@@ -38,6 +40,7 @@ public class UltBar : MonoBehaviour
             originalColors.Add(renderer.material.color);
         }
 
+         audioManager = FindObjectOfType<AudioManager>();
        
     }
 
@@ -59,6 +62,7 @@ public class UltBar : MonoBehaviour
 
         if(points == 100f)
         {
+            UltReadySound();
             anima.SetBool("Full", true);
             animat.SetBool("Q", true);
 
@@ -76,10 +80,21 @@ public class UltBar : MonoBehaviour
 
     }
 
+    void UltReadySound()
+    {
+        if(ReadySound == false)
+        {
+            FindObjectOfType<AudioManager>().Play("UltReady");
+            ReadySound = true;
+        }
+    }
+
      public void SummonUlt()
     {
         if(costUlt <= points)
         {
+            FindObjectOfType<AudioManager>().Play("UltActivate");
+            Invoke("UltExplosionSound", 1.5f);
             points -= costUlt;
             ultBar.SetPoints(points);
             anim.SetTrigger("Ult");
@@ -89,7 +104,26 @@ public class UltBar : MonoBehaviour
             {
                 Ult(firePoint);
             }
+             if (audioManager == null)
+        {
+            Debug.LogError("AudioManager nicht gefunden!");
+            return;
         }
+
+        // Wähle einen zufälligen Sound aus
+        string[] possibleSounds = { "RUlt1", "RUlt2", "RUlt3"};
+        int randomIndex = Random.Range(0, possibleSounds.Length);
+        string selectedSound = possibleSounds[randomIndex];
+
+        // Spiee den zufällig ausgewählten Sound über den AudioManager ab
+        audioManager.Play(selectedSound);
+        }
+        ReadySound = false;
+    }
+
+    void UltExplosionSound()
+    {
+        FindObjectOfType<AudioManager>().Play("UltExplosion");
     }
 
     void Ult(Transform firePoint)

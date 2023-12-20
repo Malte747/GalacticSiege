@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7552571078888385702}
   - component: {fileID: 2116496807581781111}
   - component: {fileID: 7559907719797117795}
-  - component: {fileID: 4211125378773816757}
+  - component: {fileID: -8298512672336297966}
   m_Layer: 10
   m_Name: Stein
   m_TagString: Untagged
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.9436108}
   serializedVersion: 2
   m_Radius: 5.307586
---- !u!114 &4211125378773816757
+--- !u!114 &-8298512672336297966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,11 +158,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4993251727066888982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27617168505ac51448b70b5a739bdae9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d6f97a8e73f5794db4c587ff2bdcf50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 20
+  damage: 25
   rb: {fileID: 2116496807581781111}
   impactEffect: {fileID: 4655948365765404219, guid: 46cca0307bcc3524f8f8403f7719cc68, type: 3}
   lifeTime: 0.5
+  damageCooldown: 1

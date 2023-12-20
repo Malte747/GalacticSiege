@@ -10,6 +10,7 @@ public class UltBullet : MonoBehaviour
     public GameObject impactEffect;
   public float speed = 10f;
    private Animator anim;
+   
 
 void Start()
     {
@@ -28,10 +29,11 @@ void Start()
         {
             enemy.TakeDamage(damage); 
         }
-       
+        
 
         Instantiate(impactEffect, transform.position, transform.rotation);
 
         Destroy(gameObject);
+        
     }
 }

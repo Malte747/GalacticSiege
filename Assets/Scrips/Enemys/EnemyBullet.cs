@@ -34,6 +34,7 @@ void Update()
     
      void OnTriggerEnter2D (Collider2D hitInfo) 
     {
+        FindObjectOfType<AudioManager>().Play("AlienBullet");
         PlayerHealth health = hitInfo.GetComponent<PlayerHealth>();
         if (health != null && !hasDealtDamage)
         {
@@ -72,6 +73,7 @@ void Update()
 
     void DestroyProjectile()
     {
+        FindObjectOfType<AudioManager>().Play("AlienBullet");
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

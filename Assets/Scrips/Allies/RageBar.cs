@@ -8,18 +8,20 @@ public class RageBar : MonoBehaviour
     public float maxRage = 100;
     public float rage = 0f;
     public RageAnzeige rageBar;
-    public float fillSpeed = 1.0f;
+    public float fillSpeed = 2.0f;
 
     public Transform spawnPoint;
     public GameObject Boxer;
     public GameObject Kind;
     public GameObject Oma;
+    public GameObject AnimeGirl;
     public Image UpgradeReady;
      public Image UpgradedFlame;
     [SerializeField] private bool ragebarUpgraded = false;
 
     private List<Renderer> objectRenderers = new List<Renderer>();
     private List<Color> originalColors = new List<Color>();
+    private AudioManager audioManager;
 
     void Start()
     {
@@ -32,8 +34,8 @@ public class RageBar : MonoBehaviour
             objectRenderers.Add(renderer);
             originalColors.Add(renderer.material.color);
         }
+        audioManager = FindObjectOfType<AudioManager>();
 
-       
     }
 
     public void Update()
@@ -74,11 +76,26 @@ public class RageBar : MonoBehaviour
 
     public void UpgradeRagebar()
     {
-        fillSpeed = 1.5f;
+        fillSpeed = 3f;
          Color newColo = UpgradedFlame.color;
         newColo.a = 1f;
         UpgradedFlame.color = newColo;
-    }
+
+                     if (audioManager == null)
+        {
+            Debug.LogError("AudioManager nicht gefunden!");
+            return;
+        }
+
+        // Wähle einen zufälligen Sound aus
+        string[] possibleSounds = { "Upgrade1", "Upgrade2"};
+        int randomIndex = Random.Range(0, possibleSounds.Length);
+        string selectedSound = possibleSounds[randomIndex];
+
+        // Spiee den zufällig ausgewählten Sound über den AudioManager ab
+        audioManager.Play(selectedSound);
+
+        }
 
 
 
@@ -137,6 +154,25 @@ public class RageBar : MonoBehaviour
         if (Oma != null && spawnPoint != null)
         {
             Instantiate(Oma, spawnPoint.position, spawnPoint.rotation);
+        }
+    }
+
+
+          public void SummonAnimeGirl(int costAnimeGirl)
+    {
+        if(costAnimeGirl <= rage)
+        {
+            rage -= costAnimeGirl;
+            rageBar.SetRage(rage);
+            SpawnAnimeGirl();
+        }
+    }
+
+    public void SpawnAnimeGirl()
+    {
+        if (AnimeGirl != null && spawnPoint != null)
+        {
+            Instantiate(AnimeGirl, spawnPoint.position, spawnPoint.rotation);
         }
     }
 }

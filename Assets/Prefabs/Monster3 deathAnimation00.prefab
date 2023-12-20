@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7643276194691270497}
   - component: {fileID: 1029864960689852314}
   - component: {fileID: 5356555758963715322}
+  - component: {fileID: -3284285493201447758}
   m_Layer: 0
   m_Name: Monster3 deathAnimation00
   m_TagString: Untagged
@@ -120,3 +121,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newYPosition: 1
+  newXPosition: 0
+--- !u!114 &-3284285493201447758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643999699486152759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8553364678e2af498bab6a988d04848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

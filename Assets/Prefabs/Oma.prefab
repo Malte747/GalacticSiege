@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2010120396115205443}
   - component: {fileID: 498345535047783396}
   - component: {fileID: 2249412127816912393}
+  - component: {fileID: 2074795422998357235}
   m_Layer: 14
   m_Name: hitboxOma
   m_TagString: Untagged
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   damageCooldown: 1
+--- !u!114 &2074795422998357235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3693628810963060384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26b4fe5208b94649b0bacbfdd90a043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8741000660513790885
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,11 +178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1211274
+      value: -7.096583
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.106
+      value: -5.0129066
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -537,6 +550,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 512112135756479903}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4768162355163407982}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
 --- !u!4 &2737943875829315973 stripped
 Transform:
@@ -658,7 +674,7 @@ MonoBehaviour:
   - {x: 2.4574099, y: 1.0004711, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -287242
+  m_InstanceId: -50042
   m_LocalBounds:
     m_Center: {x: 0.6418295, y: 5.016479, z: 0}
     m_Extent: {x: 1.8155804, y: 4.016008, z: 0}
@@ -769,3 +785,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4768162355163407982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073227635372235738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7bcb1ebda3c1d46a5a86bd087bf5ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -15,7 +15,7 @@ public class Allie_Behaviour : MonoBehaviour
     public int patrolDestination;
     public Transform[] patrolPoints;
     public Transform firePoint;
-    public GameObject bulletPrefab;
+    public GameObject[] projectiles;
      AllieHealth allieHealth;
     #endregion
 
@@ -74,7 +74,13 @@ public class Allie_Behaviour : MonoBehaviour
 
     public void Schuss()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+     if (projectiles.Length > 0)
+        {
+            int randomIndex = Random.Range(0, projectiles.Length);
+            GameObject selectedProjectile = projectiles[randomIndex];
+
+            Instantiate(selectedProjectile, firePoint.position, firePoint.rotation);
+        }
     }
     void Attack()
     {

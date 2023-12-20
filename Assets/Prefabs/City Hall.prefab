@@ -341,7 +341,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 2039400967225083092}
   - component: {fileID: 7600669078280306114}
   - component: {fileID: 5028819065308411010}
+  - component: {fileID: 3764694440975574040}
   m_Layer: 13
   m_Name: City Hall
   m_TagString: City Hall
@@ -437,7 +438,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -454,7 +455,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.5041938, y: 1.4841781}
+  m_Offset: {x: -0.25991774, y: 0.6976309}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -465,7 +466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.6739244, y: 4.888133}
+  m_Size: {x: 1.1853724, y: 3.315033}
   m_EdgeRadius: 0
 --- !u!114 &7600669078280306114
 MonoBehaviour:
@@ -479,9 +480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dabb04e30d6e41ac999af96ba0c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 400
   health: 0
   HealthBar: {fileID: 1234109587009473530}
+  deathEffect: {fileID: 7640600458174742523, guid: f71e78ef0fccaa24a9fd3875ca20b103, type: 3}
 --- !u!50 &5028819065308411010
 Rigidbody2D:
   serializedVersion: 4
@@ -494,7 +496,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -509,6 +511,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &3764694440975574040
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973673177978157688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a1db8329e289f8419cbd1d4e8a5d0ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &334227426500454045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -585,6 +608,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1380723280008960319, guid: dc5e54a097925844f9ea0972e86431f3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 2608102985780763276, guid: dc5e54a097925844f9ea0972e86431f3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3073360362750251021, guid: dc5e54a097925844f9ea0972e86431f3, type: 3}
       propertyPath: m_Layer
       value: 13

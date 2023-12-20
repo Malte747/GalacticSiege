@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     private List<Renderer> objectRenderers = new List<Renderer>();
     private List<Color> originalColors = new List<Color>();
+    private AudioManager audioManager;
 
     
     void Start()
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
             objectRenderers.Add(renderer);
             originalColors.Add(renderer.material.color);
         }
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
   
@@ -36,9 +38,24 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("RDeath");
             SceneManager.LoadSceneAsync(1);
         }
         HealthBar.SetHealth(health);
+                            
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager nicht gefunden!");
+            return;
+        }
+
+        // Wähle einen zufälligen Sound aus
+        string[] possibleSounds = { "Grunt1", "Grunt2"};
+        int randomIndex = Random.Range(0, possibleSounds.Length);
+        string selectedSound = possibleSounds[randomIndex];
+
+        // Spiee den zufällig ausgewählten Sound über den AudioManager ab
+        audioManager.Play(selectedSound);
         
     }
      IEnumerator ChangeColorRoutine()

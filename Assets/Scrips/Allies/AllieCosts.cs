@@ -7,6 +7,7 @@ public class AllieCosts : MonoBehaviour
  public int costBoxer = 10;
   public int costKind = 20;
    public int costOma = 25;
+   public int costAnimeGirl = 35;
    public int costRageUpgrade = 40;
  RageBar RageBar;
 
@@ -32,6 +33,10 @@ void Update()
     if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             RageBar.SummonOma(costOma);
+        }
+    if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            RageBar.SummonAnimeGirl(costAnimeGirl);
         }
 
     if (Input.GetKeyDown(KeyCode.E))

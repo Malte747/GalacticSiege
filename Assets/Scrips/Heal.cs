@@ -20,7 +20,7 @@ public class Heal : MonoBehaviour
         PlayerHealth health = hitInfo.gameObject.GetComponent<PlayerHealth>();
         if(hitInfo.gameObject.tag == "Player")
     {
-      
+        FindObjectOfType<AudioManager>().Play("Heart");
         health.Heal(healing);
 
         Destroy(gameObject);

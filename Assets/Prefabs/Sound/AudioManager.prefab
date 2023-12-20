@@ -1,0 +1,516 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8147883296140183926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084100286187301341}
+  - component: {fileID: 8882406585657904733}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084100286187301341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147883296140183926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8882406585657904733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147883296140183926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee1bbabefa0ab54ea1009c113c68535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: c85b6ba2ab87f1c4db99bdfcd2715aec, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 2109450898420379078, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: ThemeMenu
+    clip: {fileID: 8300000, guid: 940baec39d7ab35438a282b6a91dcb70, type: 3}
+    volume: 0.15
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 2109450898420379078, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Victory
+    clip: {fileID: 8300000, guid: 9158440bd9e075e4c8535c23aa3f255a, type: 3}
+    volume: 0.04
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 2109450898420379078, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Defeat
+    clip: {fileID: 8300000, guid: bd521e5b0a830184cbcd914000a50993, type: 3}
+    volume: 0.05
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 2109450898420379078, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: UltExplosion
+    clip: {fileID: 8300000, guid: 1fd31868d68903d4f9e2c4a3b7ef98f3, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: UltActivate
+    clip: {fileID: 8300000, guid: 281e15cc92254794eaf05caf4d044b76, type: 3}
+    volume: 0.09
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: UltReady
+    clip: {fileID: 8300000, guid: 03acb8d2079c52446b9884f07f2390c0, type: 3}
+    volume: 0.17
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: 57cbab33054592d419ff37302d545474, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: 71510d74e61dade44a05e530e42159be, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: PlayerBullet
+    clip: {fileID: 8300000, guid: f9d8c914e0778004785fff6288821cd3, type: 3}
+    volume: 0.05
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Heart
+    clip: {fileID: 8300000, guid: 7673785810980ca44a3e1de7107e733c, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: AlienBullet
+    clip: {fileID: 8300000, guid: 0c7a9ee9ec4545f4eb43f787e5327dab, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1.5
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Monster4Attack
+    clip: {fileID: 8300000, guid: 0f9cd84a996b11b43900b4ecf23ac4f8, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1.5
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Oma1
+    clip: {fileID: 8300000, guid: 0eab1f34ebb9471488f3d80c1f6b3870, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Oma2
+    clip: {fileID: 8300000, guid: 2db08dfbbecf12e42bece91f193dca2c, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Oma3
+    clip: {fileID: 8300000, guid: ab5b520d10b070c42a57cff54149ac05, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Oma4
+    clip: {fileID: 8300000, guid: d145a351fd52807459232d2b1d810146, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Boxer1
+    clip: {fileID: 8300000, guid: 0a469a12322b0274ab0a530d2deb6fa8, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Boxer2
+    clip: {fileID: 8300000, guid: cedf0910b2ee12740b96319618cee1de, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Boxer3
+    clip: {fileID: 8300000, guid: 531eba897b1221145add811499e1ed6b, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Boxer4
+    clip: {fileID: 8300000, guid: 7453104d57935e9469aafda4df9ef319, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: BoxerPunch
+    clip: {fileID: 8300000, guid: a37f44cbf8c2a7443a3c361efa2f233a, type: 3}
+    volume: 0.03
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind1
+    clip: {fileID: 8300000, guid: 2c6a58ef6735ad34896d464035ad4dff, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind2
+    clip: {fileID: 8300000, guid: 0a19800759243b542b619c25f8155a40, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind3
+    clip: {fileID: 8300000, guid: 76f503db7ef91e14c80ffde7e0bb1739, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind4
+    clip: {fileID: 8300000, guid: d67f007e9cf213442bc59b08e5d5cebe, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind5
+    clip: {fileID: 8300000, guid: c8a14468d92a81a419912da391f155d2, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind6
+    clip: {fileID: 8300000, guid: 455f338fedc78454c9307730811b98ba, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Kind7
+    clip: {fileID: 8300000, guid: 18155b17e8efb214eae4d982606b2c31, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Stein
+    clip: {fileID: 8300000, guid: eaff025ea69777b448530bd3c1ced927, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Monster3Explosion
+    clip: {fileID: 8300000, guid: 51b9ec5fb6093ac41a21c6ea8e539632, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: MDeath1
+    clip: {fileID: 8300000, guid: 4a178cf05258da441983484a5e38e4bd, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: MDeath2
+    clip: {fileID: 8300000, guid: eb2ee631b9fdc8e468de79cba51593e3, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: MDeath3
+    clip: {fileID: 8300000, guid: e5735cbb55b97bc4d9e7a915b48766ff, type: 3}
+    volume: 0.01
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: MDeath4
+    clip: {fileID: 8300000, guid: 323da0f754ad3704c97c1bf46d42caf2, type: 3}
+    volume: 0.02
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Monster1hit
+    clip: {fileID: 8300000, guid: 317647c8bda7c53458563b6fabf8f16a, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: OmaPunch
+    clip: {fileID: 8300000, guid: b977af6153235b64099b66fc53f9ef0d, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RStart1
+    clip: {fileID: 8300000, guid: e60cc353d95806c489d051b4e5df5e46, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RStart2
+    clip: {fileID: 8300000, guid: 2925a8c5f5a55734aabe116e82a6141d, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RStart3
+    clip: {fileID: 8300000, guid: 3c8dfc3b2983dda4dbb7500a40289df0, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RStart4
+    clip: {fileID: 8300000, guid: 0e02bc8c1263a614ba09449ec4048cfe, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Win1
+    clip: {fileID: 8300000, guid: ecf46be0f307ec449bb876de4a9d785c, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Win2
+    clip: {fileID: 8300000, guid: 1cf81cc2cf75a414e9cd00d1326193df, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RUlt1
+    clip: {fileID: 8300000, guid: fd839c7cd0d90dd488d797280ad12e43, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RUlt2
+    clip: {fileID: 8300000, guid: e0ff9538b4ffc5f49b6fcf6997514aad, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RUlt3
+    clip: {fileID: 8300000, guid: 8b1481f860dd8a84abf33852bb8f2e47, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Upgrade1
+    clip: {fileID: 8300000, guid: eb42821bc18989a43ac4bad170f3e45b, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Upgrade2
+    clip: {fileID: 8300000, guid: 2d87cc912f2f6d24e9ab961990f6fcd6, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Grunt1
+    clip: {fileID: 8300000, guid: 181b03ea0247d104388a15d16576974d, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: Grunt2
+    clip: {fileID: 8300000, guid: 7c129d76ef6026d4c8bc404e6916fcb5, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: RDeath
+    clip: {fileID: 8300000, guid: 82301085bc5f3c64883c308071cbbebf, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}
+  - name: AnimeBullet
+    clip: {fileID: 8300000, guid: 1765f04023bdeb44baeffd7b4812ce76, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -3621345776968707570, guid: 85a1791013fb2c84990eb44a0f31a34f, type: 2}
+    source: {fileID: 0}

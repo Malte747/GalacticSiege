@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9083514623105800579}
   - component: {fileID: 8491351407960242947}
   - component: {fileID: 5291992211556135884}
+  - component: {fileID: -1527992271925691123}
   m_Layer: 0
   m_Name: Monster2 Death00
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newYPosition: 3.97
+  newXPosition: 0
 --- !u!95 &5291992211556135884
 Animator:
   serializedVersion: 5
@@ -120,3 +122,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1527992271925691123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982759101159270646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f84432b392f6da4dbe8e0e474495f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -33,9 +33,10 @@ public class Bullet : MonoBehaviour
             hasDealtDamage = true;
             Invoke("ResetDamageCooldown", damageCooldown);
             enemy.TakeDamage(damage);
+            
          
         }
-       
+        FindObjectOfType<AudioManager>().Play("PlayerBullet");
 
         Instantiate(impactEffect, transform.position, transform.rotation);
 
@@ -51,6 +52,7 @@ public class Bullet : MonoBehaviour
 
     void DestroyProjectile()
     {
+        FindObjectOfType<AudioManager>().Play("PlayerBullet");
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

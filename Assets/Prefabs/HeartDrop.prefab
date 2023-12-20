@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3001815881388914188}
   - component: {fileID: 4810211707485677300}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6126998068407869666}
   - component: {fileID: 8590619299840030240}
   - component: {fileID: 6772150331513613463}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: HeartDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

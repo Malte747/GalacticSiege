@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6126536186182831705}
   - component: {fileID: 2315291299870375780}
   - component: {fileID: 4987322750898550939}
+  - component: {fileID: 8133037514867984067}
   m_Layer: 0
   m_Name: Monster 4 DeathAnimation00
   m_TagString: Untagged
@@ -121,3 +122,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newYPosition: 1.76
   newXPosition: 0
+--- !u!114 &8133037514867984067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5983789192143607874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f84432b392f6da4dbe8e0e474495f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

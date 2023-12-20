@@ -90,6 +90,7 @@ public class PlayerRun : MonoBehaviour
 		if(KBCounter <= 0)
 		{
 			Run();
+			GameObject.Find("Music").GetComponent<AudioManager>().Play("Defeat");
 		} 
 		else 
 		{
