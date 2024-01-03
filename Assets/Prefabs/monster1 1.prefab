@@ -404,7 +404,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -4927203
+  m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &2008075298996699170
@@ -695,11 +695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.88
+      value: 9.496188
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.98
+      value: -5.235335
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1038,7 +1038,7 @@ MonoBehaviour:
     m_Bits: 24832
   rayCastLength: 6
   attackDistance: 1
-  moveSpeed: 1.2
+  moveSpeed: 1.5
   timer: 2
   patrolDestination: 0
   patrolPoints:
@@ -1081,7 +1081,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDrag: 100
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   - {x: 4.187308, y: 0.46460915, z: 0}
   m_ShapePathHash: -2046872556
   m_Mesh: {fileID: 0}
-  m_InstanceId: -121160
+  m_InstanceId: -69048
   m_LocalBounds:
     m_Center: {x: 0.7060113, y: 3.7611506, z: 0}
     m_Extent: {x: 3.4812965, y: 3.2965415, z: 0}

@@ -550,6 +550,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 512112135756479903}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4768162355163407982}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
 --- !u!4 &2737943875829315973 stripped
 Transform:
@@ -699,7 +702,7 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 3268528357902300704, guid: 97f82cdf6802a57478da05e5d3410669, type: 3}
   firePoint: {fileID: 0}
-  projectiles: []
+  bulletPrefab: {fileID: 0}
   inRange: 0
   cooling: 0
 --- !u!61 &5964769005165909012
@@ -782,3 +785,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4768162355163407982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073227635372235738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7bcb1ebda3c1d46a5a86bd087bf5ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

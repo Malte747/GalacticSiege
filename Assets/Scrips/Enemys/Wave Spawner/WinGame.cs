@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class WinGame : MonoBehaviour
 {
     MainMenu _mainmenu;
-     WaveSpawner WaveSpawner;
-     WaveSpawner2 WaveSpawner2;
-     WaveSpawner3 WaveSpawner3;
-     WaveSpawner4 WaveSpawner4;
+    WaveSpawner WaveSpawner;
+    WaveSpawner2 WaveSpawner2;
+    WaveSpawner3 WaveSpawner3;
+    WaveSpawner4 WaveSpawner4;
     public bool GameOver = false;
     AudioManager audioManager;
 
@@ -26,6 +26,7 @@ public class WinGame : MonoBehaviour
     }
     void Update()
     {
+
         if(WaveSpawner.WinActive && WaveSpawner2.WinActive && WaveSpawner3.WinActive && WaveSpawner4.WinActive && !GameOver)
         {
             Win();
@@ -40,7 +41,7 @@ public class WinGame : MonoBehaviour
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];
 
-        
+        // Spiee den zufällig ausgewählten Sound über den AudioManager ab
         audioManager.Play(selectedSound);
             
         }

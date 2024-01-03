@@ -51,19 +51,17 @@ void Update()
             Invoke("ResetDamageCooldown", damageCooldown);
             Leben.TakeDamage(damage);
         }
-
          AllieHealth allieHealth = hitInfo.GetComponent<AllieHealth>();
         if (allieHealth != null && !hasDealtDamage)
         {
             hasDealtDamage = true;
-            Debug.Log("Allie Hit Before Damage" + allieHealth);
             Invoke("ResetDamageCooldown", damageCooldown);
             allieHealth.TakeDamage(damage);
-            Debug.Log("Allie Hit");
         }
        
 
         Instantiate(impactEffect, transform.position, transform.rotation);
+
         Destroy(gameObject);
     }
 

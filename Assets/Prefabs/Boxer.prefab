@@ -1290,6 +1290,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 37d61b7dea58c76448183af51b637dbe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3977485948083180876}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 37d61b7dea58c76448183af51b637dbe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9092591922045743227}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 37d61b7dea58c76448183af51b637dbe, type: 3}
 --- !u!4 &695944067125993185 stripped
 Transform:
@@ -1513,7 +1516,7 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 3268528357902300704, guid: 97f82cdf6802a57478da05e5d3410669, type: 3}
   firePoint: {fileID: 0}
-  projectiles: []
+  bulletPrefab: {fileID: 0}
   inRange: 0
   cooling: 0
 --- !u!95 &93098432961042233
@@ -1582,3 +1585,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2269801, y: 0.549678}
   m_EdgeRadius: 0
+--- !u!114 &9092591922045743227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213889667173935637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f3feeba5098c741ba784c18ad9e1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

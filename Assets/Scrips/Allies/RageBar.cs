@@ -8,7 +8,7 @@ public class RageBar : MonoBehaviour
     public float maxRage = 100;
     public float rage = 0f;
     public RageAnzeige rageBar;
-    public float fillSpeed = 1.5f;
+    public float fillSpeed = 2.0f;
 
     public Transform spawnPoint;
     public GameObject Boxer;
@@ -76,7 +76,7 @@ public class RageBar : MonoBehaviour
 
     public void UpgradeRagebar()
     {
-        fillSpeed = 2.5f;
+        fillSpeed = 3f;
          Color newColo = UpgradedFlame.color;
         newColo.a = 1f;
         UpgradedFlame.color = newColo;
@@ -87,12 +87,12 @@ public class RageBar : MonoBehaviour
             return;
         }
 
-       
+        // Wähle einen zufälligen Sound aus
         string[] possibleSounds = { "Upgrade1", "Upgrade2"};
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];
 
-        
+        // Spiee den zufällig ausgewählten Sound über den AudioManager ab
         audioManager.Play(selectedSound);
 
         }
@@ -114,19 +114,8 @@ public class RageBar : MonoBehaviour
         if (Boxer != null && spawnPoint != null)
         {
             Instantiate(Boxer, spawnPoint.position, spawnPoint.rotation);
-            BoxerSound();
         }
     }
-
-    void BoxerSound()
-        {
-        
-        string[] possibleSounds = { "Boxer1", "Boxer2", "Boxer3", "Boxer4"};
-        int randomIndex = Random.Range(0, possibleSounds.Length);
-        string selectedSound = possibleSounds[randomIndex];
-
-        audioManager.Play(selectedSound);
-        }
 
 
 
@@ -145,20 +134,8 @@ public class RageBar : MonoBehaviour
         if (Kind != null && spawnPoint != null)
         {
             Instantiate(Kind, spawnPoint.position, spawnPoint.rotation);
-            KindSound();
         }
-       
     }
-
-    void KindSound()
-        {
-        
-        string[] possibleSounds = { "Kind1", "Kind2", "Kind3", "Kind4", "Kind5", "Kind6", "Kind7"};
-        int randomIndex = Random.Range(0, possibleSounds.Length);
-        string selectedSound = possibleSounds[randomIndex];
-
-        audioManager.Play(selectedSound);
-        }
 
 
 
@@ -177,23 +154,11 @@ public class RageBar : MonoBehaviour
         if (Oma != null && spawnPoint != null)
         {
             Instantiate(Oma, spawnPoint.position, spawnPoint.rotation);
-            OmaSound();
         }
     }
 
-    void OmaSound()
-        {
-        
-            string[] possibleSounds = { "Oma1", "Oma2", "Oma3", "Oma4"};
-            int randomIndex = Random.Range(0, possibleSounds.Length);
-            string selectedSound = possibleSounds[randomIndex];
 
-            audioManager.Play(selectedSound);
-        }
-
-
-
-public void SummonAnimeGirl(int costAnimeGirl)
+          public void SummonAnimeGirl(int costAnimeGirl)
     {
         if(costAnimeGirl <= rage)
         {
@@ -203,22 +168,11 @@ public void SummonAnimeGirl(int costAnimeGirl)
         }
     }
 
-public void SpawnAnimeGirl()
+    public void SpawnAnimeGirl()
     {
         if (AnimeGirl != null && spawnPoint != null)
         {
             Instantiate(AnimeGirl, spawnPoint.position, spawnPoint.rotation);
-            AnimeGirlSound();
         }
     }
-
-void AnimeGirlSound()
-        {
-        
-            string[] possibleSounds = { "Anime1", "Anime2", "Anime3", "Anime4"};
-            int randomIndex = Random.Range(0, possibleSounds.Length);
-            string selectedSound = possibleSounds[randomIndex];
-
-            audioManager.Play(selectedSound);
-        }
 }

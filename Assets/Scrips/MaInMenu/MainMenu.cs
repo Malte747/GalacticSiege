@@ -39,8 +39,6 @@ public class MainMenu : MonoBehaviour
       }
       else
       {
-        if(!GameObject.Find("Level Count"))
-          return;
         LevelText = GameObject.Find("Level Count").GetComponent<TextMeshProUGUI>();
         IncreaseLevel();
       }

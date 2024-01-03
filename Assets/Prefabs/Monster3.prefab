@@ -59,7 +59,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -4927203
+  m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &2725159131966615345
@@ -432,11 +432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ff31a512c5a7d624ba86aa501178c717, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.0242767
+      value: -0.531682
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ff31a512c5a7d624ba86aa501178c717, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.040804
+      value: -5.4305162
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ff31a512c5a7d624ba86aa501178c717, type: 3}
       propertyPath: m_LocalPosition.z
@@ -725,7 +725,7 @@ MonoBehaviour:
   - {x: 0.20197532, y: 2.0341108, z: 0}
   m_ShapePathHash: 1577793538
   m_Mesh: {fileID: 0}
-  m_InstanceId: -122360
+  m_InstanceId: -5906
   m_LocalBounds:
     m_Center: {x: 0.020483732, y: 5.40604, z: 0}
     m_Extent: {x: 3.433489, y: 3.3719296, z: 0}

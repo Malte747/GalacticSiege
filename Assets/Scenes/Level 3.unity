@@ -1843,7 +1843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -485990856666115531, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.40776277
+      value: 0.47684744
       objectReference: {fileID: 0}
     - target: {fileID: -485990856666115531, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1851,7 +1851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -485990856666115531, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9130879
+      value: -0.8789862
       objectReference: {fileID: 0}
     - target: {fileID: -485990856666115531, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1935,11 +1935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2319998805419544334, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8685093
+      value: 0.92512965
       objectReference: {fileID: 0}
     - target: {fileID: 2319998805419544334, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.49567297
+      value: 0.3796515
       objectReference: {fileID: 0}
     - target: {fileID: 2428427081671879773, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_Layer
@@ -2023,7 +2023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5251891141940544215, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5251891141940544215, guid: 5d89c32d351a4644ba87132ba9802acb, type: 3}
       propertyPath: m_SortingLayerID
@@ -2468,8 +2468,8 @@ MonoBehaviour:
   - {x: 1.2862133, y: 3.6116567, z: 0}
   - {x: 0.13213521, y: 3.5170393, z: 0}
   m_ShapePathHash: -173232856
-  m_Mesh: {fileID: 598367897}
-  m_InstanceId: 99864
+  m_Mesh: {fileID: 601384699}
+  m_InstanceId: 105704
   m_LocalBounds:
     m_Center: {x: 0.32751375, y: 6.6147285, z: 0}
     m_Extent: {x: 0.9989152, y: 3.0976892, z: 0}
@@ -3137,7 +3137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366673744}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.5013928, w: 0.86521983}
+  m_LocalRotation: {x: -0, y: -0, z: -0.45563, w: 0.8901693}
   m_LocalPosition: {x: 1.8986914, y: -0.17026274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4665,7 +4665,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 96f7d99c4aa46384a899a116aa7d4126, type: 3}
---- !u!43 &598367897
+--- !u!43 &601384699
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7323,7 +7323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -34767057
   m_SortingLayer: 4
-  m_SortingOrder: 15
+  m_SortingOrder: 16
   m_Sprite: {fileID: 21300000, guid: 3d03312a1d25f9f4cbaef25727f8ec77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13154,10 +13154,18 @@ MonoBehaviour:
   waves:
   - name: Wave 1
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 2
+    rate: 0.5
+  - name: Wave 1
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
     count: 1
     rate: 1
   - name: Wave 1
-    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 1
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
     count: 1
     rate: 1
   - name: Wave 1
@@ -13169,24 +13177,8 @@ MonoBehaviour:
     count: 1
     rate: 1
   - name: Wave 1
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
-    rate: 1
-  - name: Wave 1
     enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
-    rate: 1
-  - name: Wave 1
-    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
-    rate: 1
-  - name: Wave 1
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
-    rate: 1
-  - name: Wave 1
-    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: Wave 1
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
@@ -13198,6 +13190,26 @@ MonoBehaviour:
     rate: 1
   - name: Wave 1
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 2
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 1
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 1
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 2
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 1
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
     count: 1
     rate: 1
   spawnPoints:
@@ -13255,19 +13267,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Wave 1
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 2
+    rate: 1
+  - name: Wave 1
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 2
+    rate: 1
+  - name: Wave 1
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
     count: 2
     rate: 1
   - name: Wave 1
     enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
-    rate: 1
-  - name: Wave 1
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
     count: 2
     rate: 1
   - name: Wave 1
-    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
     count: 1
     rate: 1
   spawnPoints:
@@ -13289,11 +13305,11 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: 
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 3
+    count: 4
     rate: 0.5
   spawnPoints:
   - {fileID: 93008198}
@@ -13417,11 +13433,27 @@ MonoBehaviour:
     rate: 1
   - name: 
     enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 2
+    rate: 1
+  - name: 
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 2
+    rate: 1
+  - name: 
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
     count: 2
     rate: 1
   spawnPoints:
   - {fileID: 93008198}
-  timeBetweenWaves: 20
+  timeBetweenWaves: 10
   WinActive: 0
 --- !u!114 &1848499561
 MonoBehaviour:
@@ -13940,7 +13972,7 @@ Transform:
   m_GameObject: {fileID: 1874200360}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.46446878, w: 0.8855896}
-  m_LocalPosition: {x: 2.8149312, y: 6.782164, z: 0}
+  m_LocalPosition: {x: 2.9597135, y: 6.71402, z: 0}
   m_LocalScale: {x: 3.8461537, y: 3.8461537, z: 3.8461537}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14519,7 +14551,7 @@ Transform:
   m_GameObject: {fileID: 1969990685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.52, y: -3.2, z: -1.1649241}
+  m_LocalPosition: {x: -48.55, y: 0.02, z: -1.1649241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15290,7 +15322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -34767057
   m_SortingLayer: 4
-  m_SortingOrder: 14
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: a76a373f9a810e6458e0c5a997afc44b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
