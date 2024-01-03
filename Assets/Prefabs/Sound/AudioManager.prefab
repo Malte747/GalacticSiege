@@ -66,7 +66,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Victory
     clip: {fileID: 8300000, guid: 9158440bd9e075e4c8535c23aa3f255a, type: 3}
-    volume: 0.04
+    volume: 0.05
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerBullet
     clip: {fileID: 8300000, guid: f9d8c914e0778004785fff6288821cd3, type: 3}
-    volume: 0.05
+    volume: 0.07
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Monster3Explosion
     clip: {fileID: 8300000, guid: 51b9ec5fb6093ac41a21c6ea8e539632, type: 3}
-    volume: 0.1
+    volume: 0.07
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0

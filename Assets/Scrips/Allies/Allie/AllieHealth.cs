@@ -18,7 +18,7 @@ public class AllieHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        HealthBar.SetMaxHealth(maxHealth);
+       // HealthBar.SetMaxHealth(maxHealth);
     }
     
    public void TakeDamage (int damage)
@@ -28,8 +28,9 @@ public class AllieHealth : MonoBehaviour
     if (health <= 0)
     {
         Dead = true;
+        
+        //HealthBar.SetHealth(health);
         Destroy(gameObject, 2f);
-        HealthBar.SetHealth(health);
    }
 
    
