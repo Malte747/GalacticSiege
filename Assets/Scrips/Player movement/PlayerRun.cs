@@ -43,7 +43,7 @@ public class PlayerRun : MonoBehaviour
 	
 	public bool KnockFromRight;
 
-
+	public bool inputEnabled = true;
 
 
     private void Awake()
@@ -56,6 +56,21 @@ public class PlayerRun : MonoBehaviour
 		IsFacingRight = true;
 	}
 
+	public void DisableInput()
+    {
+        inputEnabled = false;
+    }
+
+    public void EnableInput()
+    {
+		 Invoke("Enabled", 6f);
+        
+    }
+
+	public void Enabled()
+	{
+		inputEnabled = true;
+	}
 	private void Update()
 	{	
 		#region TIMERS
@@ -63,10 +78,16 @@ public class PlayerRun : MonoBehaviour
 		#endregion
 
 		#region INPUT HANDLER
+		if (inputEnabled)
+        {
 		_moveInput.x = Input.GetAxisRaw("Horizontal");
-			
+		}
+		else
+		{
+		_moveInput.x = 0;
+		}
 		animator.SetFloat("Speed", Mathf.Abs(_moveInput.x));
-
+	
 		if (_moveInput.x != 0)
 			{CheckDirectionToFace(_moveInput.x > 0);
 			}
@@ -90,7 +111,7 @@ public class PlayerRun : MonoBehaviour
 		if(KBCounter <= 0)
 		{
 			Run();
-			AudioManager.instance.Play("Defeat");
+			//AudioManager.instance.Play("Defeat");
 			//GameObject.Find("Music").GetComponent<AudioManager>().Play("Defeat");
 		} 
 		else 
@@ -111,9 +132,11 @@ public class PlayerRun : MonoBehaviour
     #region RUN METHODS
     private void Run()
 	{
+		if(inputEnabled)
+		{
 		//Calculate the direction we want to move in and our desired velocity
 		float targetSpeed = _moveInput.x * Data.runMaxSpeed;
-
+		
 		#region Calculate AccelRate
 		float accelRate;
 
@@ -124,7 +147,7 @@ public class PlayerRun : MonoBehaviour
 		else
 			accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount * Data.accelInAir : Data.runDeccelAmount * Data.deccelInAir;
 		#endregion
-
+		
 		//Not used since no jump implemented here, but may be useful if you plan to implement your own
 		/* 
 		#region Add Bonus Jump Apex Acceleration
@@ -156,7 +179,7 @@ public class PlayerRun : MonoBehaviour
 		//Convert this to a vector and apply to rigidbody
 		RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
 
-		
+		}
 	}
 
 	private void Turn()

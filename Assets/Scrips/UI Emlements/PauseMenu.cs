@@ -9,12 +9,26 @@ public class PauseMenu : MonoBehaviour
     private bool allowInput = true;
     public Button uiButton;
     public Button uiButton2;
+    public Button[] uiButtonEnterArray;
+    public Button[] uiButtonEnterArray2;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // P-Taste als Toggel für Pause/Weiterführung
         {
             SimulateButtonPress();        
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return)) // P-Taste als Toggel für Pause/Weiterführung
+        {
+
+            SimulateButtonPressEnter();        
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // P-Taste als Toggel für Pause/Weiterführung
+        {
+
+            SimulateButtonPressEnter2();        
         }
     }
 
@@ -26,13 +40,40 @@ public class PauseMenu : MonoBehaviour
         {
             uiButton.onClick.Invoke(); // Simuliert einen Klick auf den UI-Button
         }
-        else
+        else if (uiButton2.isActiveAndEnabled)
         {
             uiButton2.onClick.Invoke();
         }
+        else return;
 
         
         
+    }
+
+    void SimulateButtonPressEnter()
+    {
+        // Aktiven Button aus dem Array finden
+        foreach (Button button in uiButtonEnterArray)
+        {
+            if (button != null && button.isActiveAndEnabled)
+            {
+                button.onClick.Invoke(); // Simuliert einen Klick auf den aktiven UI-Button
+                break; // Stoppt die Schleife, sobald der aktive Button gefunden wurde
+            }
+        }
+    }
+
+        void SimulateButtonPressEnter2()
+    {
+        // Aktiven Button aus dem Array finden
+        foreach (Button button in uiButtonEnterArray2)
+        {
+            if (button != null && button.isActiveAndEnabled)
+            {
+                button.onClick.Invoke(); // Simuliert einen Klick auf den aktiven UI-Button
+                break; // Stoppt die Schleife, sobald der aktive Button gefunden wurde
+            }
+        }
     }
 
     public void TogglePause()

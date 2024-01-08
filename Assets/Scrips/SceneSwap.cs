@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 public class SceneSwap : MonoBehaviour
 {
         MainMenu _mainmenu;
         private AudioManager audioManager;
+        public bool inMenu = true;
 
 
         void Start()
@@ -18,6 +20,9 @@ public class SceneSwap : MonoBehaviour
 
   public void NextSequence()
   {
+    if(inMenu == true)
+    {
+    inMenu = false;
     SceneManager.LoadSceneAsync(_mainmenu.nextLevel);
 
      if (audioManager == null)
@@ -34,7 +39,7 @@ public class SceneSwap : MonoBehaviour
         // Spiee den zufällig ausgewählten Sound über den AudioManager ab
         audioManager.Play(selectedSound);
     }
-  
+  }
     
 
   public void Menu()
@@ -45,6 +50,9 @@ public class SceneSwap : MonoBehaviour
 
   public void TryAgain()
   {
+    if(inMenu == true)
+    {
+    inMenu = false;
      SceneManager.LoadSceneAsync(_mainmenu.nextLevel);
        
 
@@ -62,12 +70,16 @@ public class SceneSwap : MonoBehaviour
         // Spiee den zufällig ausgewählten Sound über den AudioManager ab
         audioManager.Play(selectedSound);
     }
+  }
 
      
   
 
   public void PlayGame()
   { 
+    if(inMenu == true)
+    {
+    inMenu = false;
     SceneManager.LoadSceneAsync(_mainmenu.nextLevel);
 
      if (audioManager == null)
@@ -84,6 +96,12 @@ public class SceneSwap : MonoBehaviour
         // Spiee den zufällig ausgewählten Sound über den AudioManager ab
         audioManager.Play(selectedSound);
     }
+  }
+
+  public void Reset()
+  {
+    _mainmenu.ResetLevel();
+  }
 
     
 

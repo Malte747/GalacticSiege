@@ -27,6 +27,7 @@ public class RageBar : MonoBehaviour
     {
         
         rageBar.SetRage(rage);
+        rageBar.SetRageCount(rage);
 
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
         foreach (Renderer renderer in renderers)
@@ -97,6 +98,11 @@ public class RageBar : MonoBehaviour
 
         }
 
+    public void TutorialSetFill()
+    {
+        fillSpeed = 1.5f;
+    }
+
 
 
     public void SummonBoxer(int costBoxer)
@@ -114,7 +120,9 @@ public class RageBar : MonoBehaviour
         if (Boxer != null && spawnPoint != null)
         {
             Instantiate(Boxer, spawnPoint.position, spawnPoint.rotation);
+            rageBar.SetRageCount(rage);
             BoxerSound();
+            
         }
     }
 
@@ -215,7 +223,7 @@ public void SpawnAnimeGirl()
 void AnimeGirlSound()
         {
         
-            string[] possibleSounds = { "Anime1", "Anime2", "Anime3", "Anime4"};
+            string[] possibleSounds = { "Anime1", "Anime2", "Anime3", "Anime4", "Anime5", "Anime6", "Anime7", "Anime8", "Anime9", "Anime10", "Anime11", "Anime12", "Anime13"};
             int randomIndex = Random.Range(0, possibleSounds.Length);
             string selectedSound = possibleSounds[randomIndex];
 

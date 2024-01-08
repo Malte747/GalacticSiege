@@ -11,6 +11,6 @@ public class PlayMusicDefeat : MonoBehaviour
         Audio.StopPlaying("Victory");
         Audio.StopPlaying("ThemeMenu");
         Audio.StopPlaying("Theme");
-        Audio.Play("Defeat");
+        Audio.Play("Defeat1");
     }
 }

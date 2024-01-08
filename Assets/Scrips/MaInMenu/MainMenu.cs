@@ -20,6 +20,17 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+              if (PlayerPrefs.HasKey("SavedNextLevel"))
+        {
+            nextLevel = PlayerPrefs.GetInt("SavedNextLevel");
+            currentLevel = nextLevel - 2;
+        }
+        else
+        {
+            nextLevel = 3; // Standardwert
+            currentLevel = 1; // Standardwert
+        }
+
         if (instance == null)
         {
             instance = this;
@@ -49,10 +60,20 @@ public class MainMenu : MonoBehaviour
   public void LevelCounter()
   {
     nextLevel++;
-    
+    SaveLevel(); // Speichert den nächsten Level
   }
 
+public void ResetLevel()
+{
+  nextLevel = 3;
+  SaveLevel(); // Speichert den nächsten Level
+}
 
+private void SaveLevel()
+    {
+        PlayerPrefs.SetInt("SavedNextLevel", nextLevel);
+        PlayerPrefs.Save(); // Speichert die Einstellungen
+    }
 
   public void IncreaseLevel()
     {

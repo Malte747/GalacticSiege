@@ -42,7 +42,10 @@ public class Enemy : MonoBehaviour
 
    void Die ()
    {
+    if(ultbar != null)
+    {
     ultbar.PointsAdd(ultpoints);
+    }
     Instantiate(deathEffect, transform.position, Quaternion.identity);
     Destroy(gameObject);
    }
