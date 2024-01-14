@@ -10,6 +10,10 @@ public class PlayMusicMenu : MonoBehaviour
     {
         Audio = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         Audio.StopPlaying("Theme");
+        Audio.StopPlaying("Theme2");
+        Audio.StopPlaying("Theme3");
+        Audio.StopPlaying("Theme4");
+        Audio.StopPlaying("Theme5");
         Audio.StopPlaying("Defeat1");
         Audio.StopPlaying("Victory");
         Audio.Play("ThemeMenu");

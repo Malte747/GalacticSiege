@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_Name
-      value: Monster 4
+      value: Monster4
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_Layer
@@ -564,11 +564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8893886
+      value: 7.862744
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.8160963
+      value: -5.767605
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: aaa4f7c008b6d2149a4bb049b961aff9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -749,8 +749,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25545213, y: 4.246493}
-  m_Size: {x: 3.628045, y: 8.403447}
+  m_Offset: {x: 0.22973904, y: 3.3229547}
+  m_Size: {x: 3.0187352, y: 6.5563593}
   m_Direction: 0
 --- !u!114 &9041832036433097827
 MonoBehaviour:
@@ -828,7 +828,7 @@ MonoBehaviour:
     m_Bits: 24832
   rayCastLength: 6
   attackDistance: 0.8
-  moveSpeed: 3
+  moveSpeed: 2.5
   timer: 0
   patrolDestination: 0
   patrolPoints:
@@ -863,7 +863,7 @@ MonoBehaviour:
   - {x: 1.55857, y: -0.017896652, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -316242
+  m_InstanceId: -461758
   m_LocalBounds:
     m_Center: {x: -0.0826453, y: 3.0798383, z: 0}
     m_Extent: {x: 1.6412153, y: 3.097735, z: 0}

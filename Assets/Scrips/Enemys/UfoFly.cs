@@ -5,6 +5,7 @@ using UnityEngine;
 public class UfoFly : MonoBehaviour
 {
     public Animator animator;
+    AudioManager Audio;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,5 +18,22 @@ public class UfoFly : MonoBehaviour
         {
             animator.SetTrigger("Win");
         }
+ 
+        Audio = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        Audio.StopPlaying("Defeat1");
+        Audio.StopPlaying("ThemeMenu");
+        Audio.StopPlaying("Theme");
+        Audio.StopPlaying("Theme2");
+        Audio.StopPlaying("Theme3");
+        Audio.StopPlaying("Theme4");
+        Audio.StopPlaying("Theme5");
+        Audio.Play("Ufo");
+        Invoke("WinSound", 4f);
+        
+    }
+
+    public void WinSound()
+    {
+        Audio.Play("Victory");
     }
 }

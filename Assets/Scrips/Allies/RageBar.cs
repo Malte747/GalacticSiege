@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RageBar : MonoBehaviour
 {
     public float maxRage = 100;
-    public float rage = 0f;
+    public float rage = 5f;
     public RageAnzeige rageBar;
     public float fillSpeed = 1.5f;
 
@@ -77,12 +77,12 @@ public class RageBar : MonoBehaviour
 
     public void UpgradeRagebar()
     {
-        fillSpeed = 2.5f;
+        fillSpeed = 2f;
          Color newColo = UpgradedFlame.color;
         newColo.a = 1f;
         UpgradedFlame.color = newColo;
 
-                     if (audioManager == null)
+        if (audioManager == null)
         {
             Debug.LogError("AudioManager nicht gefunden!");
             return;
@@ -103,6 +103,11 @@ public class RageBar : MonoBehaviour
         fillSpeed = 1.5f;
     }
 
+       public void TutorialSetFillNull()
+    {
+        fillSpeed = 0f;
+    }
+
 
 
     public void SummonBoxer(int costBoxer)
@@ -112,6 +117,10 @@ public class RageBar : MonoBehaviour
             rage -= costBoxer;
             rageBar.SetRage(rage);
             SpawnBoxer();
+        }
+        else
+        {
+            audioManager.Play("NoRage");
         }
     }
 
@@ -146,6 +155,10 @@ public class RageBar : MonoBehaviour
             rageBar.SetRage(rage);
             SpawnKind();
         }
+        else
+        {
+            audioManager.Play("NoRage");
+        }
     }
 
     public void SpawnKind()
@@ -178,6 +191,10 @@ public class RageBar : MonoBehaviour
             rageBar.SetRage(rage);
             SpawnOma();
         }
+        else
+        {
+            audioManager.Play("NoRage");
+        }
     }
 
     public void SpawnOma()
@@ -208,6 +225,10 @@ public void SummonAnimeGirl(int costAnimeGirl)
             rage -= costAnimeGirl;
             rageBar.SetRage(rage);
             SpawnAnimeGirl();
+        }
+        else
+        {
+            audioManager.Play("NoRage");
         }
     }
 

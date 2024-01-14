@@ -13,11 +13,15 @@ public class WinGame : MonoBehaviour
      CameraFollow CameraFollow;
      UfoFly UfoFly;
      public bool GameOver = false;
+
+     public GameObject UIHeathBarDeactivate;
+     public GameObject UIUltBarDeactivate;
+     public GameObject UIRageBarDeactivate;
+     public GameObject UISummonDeactivate;
      
 
     void Start() {
         {
-      
         _mainmenu = GameObject.Find("LevelManager").GetComponent<MainMenu>();
         WaveSpawner = GetComponent<WaveSpawner>();
         WaveSpawner2 = GetComponent<WaveSpawner2>();
@@ -35,16 +39,47 @@ public class WinGame : MonoBehaviour
             Invoke("Win", 5f);
             CameraFollow.gamerunning = false;
             UfoFly.End();
-            
+            UIHeathBarDeactivate.SetActive(false);
+            UIRageBarDeactivate.SetActive(false);
+            UISummonDeactivate.SetActive(false);
+            UIUltBarDeactivate.SetActive(false);
         }
     }
 
     void Win()
     {      
-       
+        
           _mainmenu.LevelCounter();
           Debug.Log("Win");
-          SceneManager.LoadSceneAsync(2);
+          DeactivateLevel();
+          ActivateGameObjects();
+    }
+
+        public void ActivateGameObjects()
+    {
+                // Holen Sie sich alle GameObjects in der aktuellen Szene
+        GameObject[] allGameObjects = SceneManager.GetSceneByBuildIndex(2).GetRootGameObjects();
+
+        // Deaktiviere jedes GameObject
+        foreach (GameObject go in allGameObjects)
+        {
+            go.SetActive(true);
+        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+        void DeactivateLevel()
+    {
+
+        GameObject[] allGameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+
+
+        foreach (GameObject go in allGameObjects)
+        {
+            go.SetActive(false);
+        }
+        
     }
     
 }

@@ -178,11 +178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.096583
+      value: 7.722
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.0129066
+      value: -6.061
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a795197945a14146b4045f9ccf117d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 130
+  maxHealth: 170
   health: 0
   deathEffect: {fileID: 0}
   HealthBar: {fileID: 0}
@@ -671,7 +671,7 @@ MonoBehaviour:
   - {x: 2.4574099, y: 1.0004711, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -50042
+  m_InstanceId: -466250
   m_LocalBounds:
     m_Center: {x: 0.6418295, y: 5.016479, z: 0}
     m_Extent: {x: 1.8155804, y: 4.016008, z: 0}
@@ -693,7 +693,7 @@ MonoBehaviour:
     m_Bits: 512
   rayCastLength: 3
   attackDistance: 1.7
-  moveSpeed: 1
+  moveSpeed: 1.5
   timer: 3
   patrolDestination: 0
   patrolPoints:

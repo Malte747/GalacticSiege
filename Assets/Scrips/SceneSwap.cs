@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
+using UnityEngine.UI;
 
 public class SceneSwap : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class SceneSwap : MonoBehaviour
         private AudioManager audioManager;
         public bool inMenu = true;
 
+        public GameObject loadingScreen;
+        public Slider slider;
 
-        void Start()
-        {
-            _mainmenu = GameObject.Find("LevelManager").GetComponent<MainMenu>();
-             audioManager = FindObjectOfType<AudioManager>();
-        }
+
+  void Start()
+    {
+        _mainmenu = GameObject.Find("LevelManager").GetComponent<MainMenu>();
+         audioManager = FindObjectOfType<AudioManager>();
+    }
 
 
   public void NextSequence()
@@ -23,7 +27,9 @@ public class SceneSwap : MonoBehaviour
     if(inMenu == true)
     {
     inMenu = false;
-    SceneManager.LoadSceneAsync(_mainmenu.nextLevel);
+    int sceneIndex = _mainmenu.nextLevel;
+    loadingScreen.SetActive(true);
+    StartCoroutine(LoadAsynchronously(sceneIndex));
 
      if (audioManager == null)
         {
@@ -32,7 +38,7 @@ public class SceneSwap : MonoBehaviour
         }
 
         // Wähle einen zufälligen Sound aus
-        string[] possibleSounds = { "RStart1", "RStart2", "RStart3", "RStart4"};
+        string[] possibleSounds = { "RStart1", "RStart2", "RStart3", "RStart4", "RStart5", "RStart6", "RStart7", "RStart8", "RStart9"};
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];
 
@@ -53,7 +59,9 @@ public class SceneSwap : MonoBehaviour
     if(inMenu == true)
     {
     inMenu = false;
-     SceneManager.LoadSceneAsync(_mainmenu.nextLevel);
+    int sceneIndex = _mainmenu.nextLevel;
+    loadingScreen.SetActive(true);
+    StartCoroutine(LoadAsynchronously(sceneIndex));
        
 
         if (audioManager == null)
@@ -63,7 +71,7 @@ public class SceneSwap : MonoBehaviour
         }
 
         // Wähle einen zufälligen Sound aus
-        string[] possibleSounds = { "RStart1", "RStart2", "RStart3", "RStart4"};
+        string[] possibleSounds = { "RStart1", "RStart2", "RStart3", "RStart4", "RStart5", "RStart6", "RStart7", "RStart8", "RStart9"};
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];
 
@@ -80,7 +88,9 @@ public class SceneSwap : MonoBehaviour
     if(inMenu == true)
     {
     inMenu = false;
-    SceneManager.LoadSceneAsync(_mainmenu.nextLevel);
+    int sceneIndex = _mainmenu.nextLevel;
+    loadingScreen.SetActive(true);
+    StartCoroutine(LoadAsynchronously(sceneIndex));
 
      if (audioManager == null)
         {
@@ -89,7 +99,7 @@ public class SceneSwap : MonoBehaviour
         }
 
         // Wähle einen zufälligen Sound aus
-        string[] possibleSounds = { "RStart1", "RStart2", "RStart3", "RStart4"};
+        string[] possibleSounds = { "RStart1", "RStart2", "RStart3", "RStart4", "RStart5", "RStart6", "RStart8", "RStart9"};
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];
 
@@ -97,6 +107,28 @@ public class SceneSwap : MonoBehaviour
         audioManager.Play(selectedSound);
     }
   }
+
+
+  IEnumerator LoadAsynchronously (int sceneIndex)
+  {
+      AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+      AsyncOperation operation1 = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+      AsyncOperation operation2 = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+
+
+      while (!operation.isDone && !operation1.isDone && !operation2.isDone)
+      {
+        float progress = Mathf.Clamp01(operation.progress / .9f);
+        slider.value = progress;
+
+        yield return null;
+      }
+
+  }
+
+
+
+
 
   public void Reset()
   {

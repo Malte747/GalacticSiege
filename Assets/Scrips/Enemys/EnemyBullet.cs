@@ -48,7 +48,7 @@ void Update()
         if (Leben != null && !hasDealtDamage)
         {
             hasDealtDamage = true;
-            Invoke("ResetDamageCooldown", damageCooldown);
+           Invoke("ResetDamageCooldown", damageCooldown);
             Leben.TakeDamage(damage);
         }
 
@@ -56,13 +56,12 @@ void Update()
         if (allieHealth != null && !hasDealtDamage)
         {
             hasDealtDamage = true;
-            Debug.Log("Allie Hit Before Damage" + allieHealth);
             Invoke("ResetDamageCooldown", damageCooldown);
             allieHealth.TakeDamage(damage);
-            Debug.Log("Allie Hit");
+            
         }
        
-
+    	FindObjectOfType<AudioManager>().Play("AlienBullet");
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }

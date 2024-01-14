@@ -39,7 +39,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("RDeath");
-            SceneManager.LoadSceneAsync(1);
+            DeactivateLevel();
+            ActivateGameObjects();
         }
         HealthBar.SetHealth(health);
                             
@@ -58,6 +59,46 @@ public class PlayerHealth : MonoBehaviour
         audioManager.Play(selectedSound);
         
     }
+
+        public void ActivateGameObjects()
+    {
+                // Holen Sie sich alle GameObjects in der aktuellen Szene
+        GameObject[] allGameObjects = SceneManager.GetSceneByBuildIndex(1).GetRootGameObjects();
+
+        // Deaktiviere jedes GameObject
+        foreach (GameObject go in allGameObjects)
+        {
+            go.SetActive(true);
+        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        
+        audioManager.StopPlaying("Victory");
+        audioManager.StopPlaying("ThemeMenu");
+        audioManager.StopPlaying("Theme");
+        audioManager.StopPlaying("Theme2");
+        audioManager.StopPlaying("Theme3");
+        audioManager.StopPlaying("Theme4");
+        audioManager.StopPlaying("Theme5");
+        audioManager.Play("Defeat1");
+    }
+
+        void DeactivateLevel()
+    {
+
+        GameObject[] allGameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+
+
+        foreach (GameObject go in allGameObjects)
+        {
+            go.SetActive(false);
+        }
+        
+    }
+
+
+
+
      IEnumerator ChangeColorRoutine()
     {
         // Ändere die Farbe aller Renderer auf die Zielfarbe

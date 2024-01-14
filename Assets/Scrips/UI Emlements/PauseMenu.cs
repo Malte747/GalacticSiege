@@ -9,8 +9,10 @@ public class PauseMenu : MonoBehaviour
     private bool allowInput = true;
     public Button uiButton;
     public Button uiButton2;
+    public Button uiButton3;
     public Button[] uiButtonEnterArray;
     public Button[] uiButtonEnterArray2;
+  
 
     void Update()
     {
@@ -30,6 +32,11 @@ public class PauseMenu : MonoBehaviour
 
             SimulateButtonPressEnter2();        
         }
+        if (Input.GetKeyDown(KeyCode.Q)) // P-Taste als Toggel für Pause/Weiterführung
+        {
+
+               SimulateButtonPressQ();   
+        }
     }
 
 
@@ -46,9 +53,17 @@ public class PauseMenu : MonoBehaviour
         }
         else return;
 
-        
-        
     }
+
+    void SimulateButtonPressQ()
+    {
+        if (uiButton3.isActiveAndEnabled)
+        {
+            uiButton3.onClick.Invoke(); // Simuliert einen Klick auf den UI-Button
+        }
+
+    }
+      
 
     void SimulateButtonPressEnter()
     {
@@ -75,6 +90,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
 
     public void TogglePause()
     {

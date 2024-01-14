@@ -639,7 +639,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: -8653719598885068355, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_Name
-      value: monster1 1
+      value: monster1
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: 15e48f8469aef114f80fb384cdab2321, type: 3}
       propertyPath: m_Layer
@@ -1081,7 +1081,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDrag: 100
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}

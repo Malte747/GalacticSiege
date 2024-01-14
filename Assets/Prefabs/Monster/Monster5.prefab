@@ -239,8 +239,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -4927203
-  m_SortingOrder: 0
+  m_SortingLayerID: -1912065947
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!114 &1175426830133019804
 MonoBehaviour:
@@ -580,11 +580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.83
+      value: 9.38
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.77
+      value: -5.76
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -631,6 +631,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7165880034659061930, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7165880034659061930, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_SortingLayerID
       value: -1912065947
       objectReference: {fileID: 0}
@@ -649,6 +653,10 @@ PrefabInstance:
     - target: {fileID: -4691381383639723871, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4691381383639723871, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -4691381383639723871, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_SortingLayerID
@@ -683,6 +691,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1092641441002539719, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092641441002539719, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_SortingLayerID
       value: -1912065947
       objectReference: {fileID: 0}
@@ -697,6 +709,10 @@ PrefabInstance:
     - target: {fileID: 5638863962959275187, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638863962959275187, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5638863962959275187, guid: a5ce54d9e8fd40141869a766fe6bbfa9, type: 3}
       propertyPath: m_SortingLayerID
@@ -888,8 +904,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029821062, y: 3.9551234}
-  m_Size: {x: 3.4862459, y: 7.899852}
+  m_Offset: {x: -0.029821062, y: 4.061309}
+  m_Size: {x: 3.4862459, y: 8.112223}
   m_Direction: 0
 --- !u!114 &776854285366590403
 MonoBehaviour:
@@ -917,7 +933,7 @@ MonoBehaviour:
   - {x: 1.7133017, y: -0.025371552, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -28902
+  m_InstanceId: -456318
   m_LocalBounds:
     m_Center: {x: -0.029821157, y: 3.281313, z: 0}
     m_Extent: {x: 1.7431228, y: 3.3066845, z: 0}
