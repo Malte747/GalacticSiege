@@ -15,6 +15,7 @@ public class PlayMusicVictory : MonoBehaviour
         Audio.StopPlaying("Theme3");
         Audio.StopPlaying("Theme4");
         Audio.StopPlaying("Theme5");
+        Audio.StopPlaying("BossFight");
         Audio.Play("Victory");
     }
 

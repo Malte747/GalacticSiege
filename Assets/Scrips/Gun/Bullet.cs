@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D (Collider2D hitInfo) 
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
+        UfoDeath ufodeath = hitInfo.GetComponent<UfoDeath>();
         if (enemy != null && !hasDealtDamage)
         {
             hasDealtDamage = true;
@@ -35,6 +36,12 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
             
          
+        }
+        else if(ufodeath != null && !hasDealtDamage)
+        {        
+            hasDealtDamage = true;
+            Invoke("ResetDamageCooldown", damageCooldown);
+            ufodeath.TakeDamage(damage);
         }
         FindObjectOfType<AudioManager>().Play("PlayerBullet");
 

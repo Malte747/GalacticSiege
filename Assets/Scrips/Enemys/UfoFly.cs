@@ -32,6 +32,11 @@ public class UfoFly : MonoBehaviour
         
     }
 
+    public void FakeEnd()
+    {
+        Destroy(gameObject);
+    }
+
     public void WinSound()
     {
         Audio.Play("Victory");

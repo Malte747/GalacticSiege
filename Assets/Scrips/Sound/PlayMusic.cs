@@ -16,6 +16,7 @@ public class PlayMusic : MonoBehaviour
         Audio.StopPlaying("Theme3");
         Audio.StopPlaying("Theme4");
         Audio.StopPlaying("Theme5");
+        Audio.StopPlaying("BossFight");
         string[] possibleSounds = { "Theme", "Theme2", "Theme3", "Theme4", "Theme5"};
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];

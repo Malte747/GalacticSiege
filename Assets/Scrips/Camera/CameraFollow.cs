@@ -54,5 +54,17 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
+   
+ public void FinalLevel()
+    {
+        Debug.Log("1111");
+
+            Debug.Log("2222");
+        elapsedTime += Time.deltaTime;
+        float t = Mathf.Clamp01(elapsedTime / duration);
+        float newSize = Mathf.Lerp(targetSize, startSize, t);
+        mainCamera.orthographicSize = newSize;
+        
+    }
 
 }

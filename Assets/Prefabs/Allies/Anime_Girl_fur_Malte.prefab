@@ -1343,10 +1343,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a795197945a14146b4045f9ccf117d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 60
   health: 0
   deathEffect: {fileID: 0}
   HealthBar: {fileID: 0}
+  duration: 0.2
+  targetColor: {r: 0.99215686, g: 0.6392157, b: 0.6392157, a: 1}
   Dead: 0
 --- !u!50 &9071259992205975397
 Rigidbody2D:

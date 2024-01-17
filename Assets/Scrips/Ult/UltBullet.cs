@@ -25,9 +25,14 @@ void Start()
    void OnTriggerEnter2D (Collider2D hitInfo) 
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
+        UfoDeath ufodeath = hitInfo.GetComponent<UfoDeath>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage); 
+        }
+        else if(ufodeath != null)
+        {        
+            ufodeath.TakeDamage(damage);
         }
         
 

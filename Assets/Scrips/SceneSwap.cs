@@ -14,11 +14,30 @@ public class SceneSwap : MonoBehaviour
         public GameObject loadingScreen;
         public Slider slider;
 
+        public GameObject StartButtonDeactivate;
+        public GameObject LevelCountDeactivate;
+        private bool GameDone = false;
 
   void Start()
     {
         _mainmenu = GameObject.Find("LevelManager").GetComponent<MainMenu>();
          audioManager = FindObjectOfType<AudioManager>();
+
+        if (StartButtonDeactivate != null && LevelCountDeactivate != null && _mainmenu.nextLevel >= 13)
+        {
+            StartButtonDeactivate.SetActive(false);
+            LevelCountDeactivate.SetActive(false);
+        }
+    }
+
+    void FixedUpdate()
+    {
+      if (StartButtonDeactivate != null && LevelCountDeactivate != null && _mainmenu.nextLevel == 13 && !GameDone)
+        {
+            GameDone = true;
+            StartButtonDeactivate.SetActive(false);
+            LevelCountDeactivate.SetActive(false);
+        }
     }
 
 

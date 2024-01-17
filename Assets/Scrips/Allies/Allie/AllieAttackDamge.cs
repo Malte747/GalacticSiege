@@ -19,12 +19,20 @@ public class AllieAttackDamge : MonoBehaviour
   void OnTriggerEnter2D (Collider2D hitInfo) 
     {
         Enemy health = hitInfo.GetComponent<Enemy>();
+        UfoDeath ufodeath = hitInfo.GetComponent<UfoDeath>();
         if (health != null && !hasDealtDamage)
         {
             hasDealtDamage = true;
             Invoke("ResetDamageCooldown", damageCooldown);
             health.TakeDamage(damage);
-       
+        }   
+        else if(ufodeath != null && !hasDealtDamage)
+        {        
+            hasDealtDamage = true;
+            Invoke("ResetDamageCooldown", damageCooldown);
+            ufodeath.TakeDamage(damage);
+        }
+        else return;
 
         if(BoxerPunch != null)
         {
@@ -34,10 +42,9 @@ public class AllieAttackDamge : MonoBehaviour
         {
         OmaPunch.Hit();
         }
-        else return;
         }
        
-    }
+    
 
      private void ResetDamageCooldown()
     {

@@ -19,6 +19,7 @@ public class WinGame : MonoBehaviour
      public GameObject UIRageBarDeactivate;
      public GameObject UISummonDeactivate;
      
+     
 
     void Start() {
         {
@@ -34,7 +35,7 @@ public class WinGame : MonoBehaviour
     void Update()
     {
         if(WaveSpawner.WinActive && WaveSpawner2.WinActive && WaveSpawner3.WinActive && WaveSpawner4.WinActive && !GameOver)
-        {
+        { 
             GameOver = true;
             Invoke("Win", 5f);
             CameraFollow.gamerunning = false;
@@ -48,7 +49,6 @@ public class WinGame : MonoBehaviour
 
     void Win()
     {      
-        
           _mainmenu.LevelCounter();
           Debug.Log("Win");
           DeactivateLevel();

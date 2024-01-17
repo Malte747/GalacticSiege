@@ -15,6 +15,7 @@ public class EnemyBullet : MonoBehaviour
    
     private bool hasDealtDamage = false;
      public float damageCooldown = 1.0f;
+     public WinGame wingame;
 
     
 
@@ -22,6 +23,7 @@ public class EnemyBullet : MonoBehaviour
     {
       
          Invoke("DestroyProjectile", lifeTime);
+         wingame = GameObject.Find("GM").GetComponent<WinGame>();
          
     }
 
@@ -29,6 +31,12 @@ void Update()
 {
     rb.velocity = transform.right * speed; 
     speed *= Mathf.Pow(baseValue, increaseRate * Time.deltaTime);
+
+        if(wingame != null && wingame.GameOver)
+        {
+            
+            DestroyProjectile();
+        }
 }
    
     
