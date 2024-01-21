@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RageBar : MonoBehaviour
 {
-    public float maxRage = 100;
+    public float maxRage = 70f;
     public float rage = 5f;
     public RageAnzeige rageBar;
     public float fillSpeed = 1.5f;
@@ -17,15 +17,20 @@ public class RageBar : MonoBehaviour
     public GameObject AnimeGirl;
     public Image UpgradeReady;
      public Image UpgradedFlame;
-    [SerializeField] private bool ragebarUpgraded = false;
+     public Image UpgradedFlame2;
+     public Image UpgradedFlame3;
+    public bool ragebarUpgraded = false;
+    public bool ragebarUpgraded2 = false;
+    public bool ragebarUpgraded3 = false;
 
     private List<Renderer> objectRenderers = new List<Renderer>();
     private List<Color> originalColors = new List<Color>();
     private AudioManager audioManager;
+    
 
     void Start()
     {
-        
+        rageBar.SetMaxRage(maxRage);
         rageBar.SetRage(rage);
         rageBar.SetRageCount(rage);
 
@@ -50,7 +55,7 @@ public class RageBar : MonoBehaviour
                 rageBar.SetRageCount(rage);
             }
 
-            if (ragebarUpgraded == false && rage >= 40)
+            if (ragebarUpgraded == false && rage >= 40 || ragebarUpgraded2 == false && rage >= 60 || ragebarUpgraded3 == false && rage >= 80)
             {
                     Color newColor = UpgradeReady.color;
                     newColor.a = 1f;
@@ -78,6 +83,9 @@ public class RageBar : MonoBehaviour
     public void UpgradeRagebar()
     {
         fillSpeed = 2f;
+        maxRage = 90f;
+        rageBar.SetMaxRage(maxRage);
+        rageBar.Upgrade1();
          Color newColo = UpgradedFlame.color;
         newColo.a = 1f;
         UpgradedFlame.color = newColo;
@@ -87,8 +95,7 @@ public class RageBar : MonoBehaviour
             Debug.LogError("AudioManager nicht gefunden!");
             return;
         }
-
-       
+        
         string[] possibleSounds = { "Upgrade1", "Upgrade2"};
         int randomIndex = Random.Range(0, possibleSounds.Length);
         string selectedSound = possibleSounds[randomIndex];
@@ -97,6 +104,81 @@ public class RageBar : MonoBehaviour
         audioManager.Play(selectedSound);
 
         }
+
+    public void RageUpgrade2(int costRageUpgrade2)
+    {
+        if (ragebarUpgraded == true && ragebarUpgraded2 == false && costRageUpgrade2 <= rage)
+        {
+            rage -= costRageUpgrade2;
+            rageBar.SetRage(rage);
+            ragebarUpgraded2 = true;
+            UpgradeRagebar2();
+            
+        }
+    }
+
+    public void UpgradeRagebar2()
+    {
+        fillSpeed = 3f;
+        maxRage = 110f;
+        rageBar.SetMaxRage(maxRage);
+        rageBar.Upgrade2();
+         Color newColo = UpgradedFlame2.color;
+        newColo.a = 1f;
+        UpgradedFlame2.color = newColo;
+
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager nicht gefunden!");
+            return;
+        }
+        
+        string[] possibleSounds = { "Upgrade1", "Upgrade2"};
+        int randomIndex = Random.Range(0, possibleSounds.Length);
+        string selectedSound = possibleSounds[randomIndex];
+
+        
+        audioManager.Play(selectedSound);
+    }
+
+    public void RageUpgrade3(int costRageUpgrade3)
+    {
+        if (ragebarUpgraded == true && ragebarUpgraded2 == true && ragebarUpgraded3 == false && costRageUpgrade3 <= rage)
+        {
+            rage -= costRageUpgrade3;
+            rageBar.SetRage(rage);
+            ragebarUpgraded3 = true;
+            UpgradeRagebar3();
+            
+        }
+    }
+
+    public void UpgradeRagebar3()
+    {
+        fillSpeed = 3.5f;
+        maxRage = 130f;
+        rageBar.SetMaxRage(maxRage);
+        rageBar.Upgrade2();
+         Color newColo = UpgradedFlame3.color;
+        newColo.a = 1f;
+        UpgradedFlame3.color = newColo;
+
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager nicht gefunden!");
+            return;
+        }
+        
+        string[] possibleSounds = { "Upgrade1", "Upgrade2"};
+        int randomIndex = Random.Range(0, possibleSounds.Length);
+        string selectedSound = possibleSounds[randomIndex];
+
+        
+        audioManager.Play(selectedSound);
+    }
+
+
+
 
     public void TutorialSetFill()
     {

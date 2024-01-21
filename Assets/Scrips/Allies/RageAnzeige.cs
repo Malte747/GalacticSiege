@@ -11,14 +11,17 @@ public class RageAnzeige : MonoBehaviour
     public Gradient gradient;
     public Image fill;
     public TMP_Text LevelText;
+    public GameObject Border;
+    public GameObject Fill;
+     public GameObject BG;
    
 
 
  
-    public void SetMaxRage(float rage)
+    public void SetMaxRage(float Maxrage)
     {
-        slider.maxValue = rage;
-        slider.value = rage;
+        slider.maxValue = Maxrage;
+        slider.value = Maxrage;
 
         fill.color = gradient.Evaluate(1f);
     }
@@ -35,6 +38,42 @@ public class RageAnzeige : MonoBehaviour
         LevelText.text = "" + roundedValue;
     }
 
+    public void Upgrade1()
+    {
+        RectTransform rectTransform = Border.GetComponent<RectTransform>();
+        rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x + 25.45f, rectTransform.offsetMax.y);
+
+        RectTransform rectTransformFill = Fill.GetComponent<RectTransform>();
+        rectTransformFill.offsetMax = new Vector2(rectTransformFill.offsetMax.x + 25.45f, rectTransformFill.offsetMax.y);
+
+        RectTransform rectTransformBG = BG.GetComponent<RectTransform>();
+        rectTransformBG.offsetMax = new Vector2(rectTransformBG.offsetMax.x + 26f, rectTransformBG.offsetMax.y);
+
+    }
+
+        public void Upgrade2()
+    {
+        RectTransform rectTransform = Border.GetComponent<RectTransform>();
+        rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x + 25.45f, rectTransform.offsetMax.y);
+
+        RectTransform rectTransformFill = Fill.GetComponent<RectTransform>();
+        rectTransformFill.offsetMax = new Vector2(rectTransformFill.offsetMax.x + 25.45f, rectTransformFill.offsetMax.y);
+
+        RectTransform rectTransformBG = BG.GetComponent<RectTransform>();
+        rectTransformBG.offsetMax = new Vector2(rectTransformBG.offsetMax.x + 26f, rectTransformBG.offsetMax.y);
+    }
+
+        public void Upgrade3()
+    {
+        RectTransform rectTransform = Border.GetComponent<RectTransform>();
+        rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x + 25.45f, rectTransform.offsetMax.y);
+
+        RectTransform rectTransformFill = Fill.GetComponent<RectTransform>();
+        rectTransformFill.offsetMax = new Vector2(rectTransformFill.offsetMax.x + 25.45f, rectTransformFill.offsetMax.y);
+
+        RectTransform rectTransformBG = BG.GetComponent<RectTransform>();
+        rectTransformBG.offsetMax = new Vector2(rectTransformBG.offsetMax.x + 26f, rectTransformBG.offsetMax.y);
+    }
 
 
 

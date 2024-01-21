@@ -53,6 +53,6 @@ public class AllieAttackDamge : MonoBehaviour
 
     public void MoreDmgOma()
     {
-        damage = 70;
+        damage = 50;
     }
 }

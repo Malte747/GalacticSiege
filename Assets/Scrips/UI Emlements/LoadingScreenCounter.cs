@@ -14,11 +14,18 @@ public class LoadingScreenCounter : MonoBehaviour
 
 private void Start()
     {
+      
               if (PlayerPrefs.HasKey("SavedNextLevel"))
         {
             nextLevel = PlayerPrefs.GetInt("SavedNextLevel");
             currentLevel = nextLevel - 2;
         }
+        else
+        {
+          nextLevel = 3;
+          currentLevel = nextLevel - 2;
+        }
+        
               if(LevelText != null)
       {
         return;
@@ -30,7 +37,7 @@ private void Start()
         LevelText = GameObject.Find("Level Counter").GetComponent<TextMeshProUGUI>();
         IncreaseLevel();
       }
-
+    
     }
 
     

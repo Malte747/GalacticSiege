@@ -32,9 +32,8 @@ public class SceneSwap : MonoBehaviour
 
     void FixedUpdate()
     {
-      if (StartButtonDeactivate != null && LevelCountDeactivate != null && _mainmenu.nextLevel == 13 && !GameDone)
+      if (StartButtonDeactivate != null && LevelCountDeactivate != null && _mainmenu.nextLevel == 13)
         {
-            GameDone = true;
             StartButtonDeactivate.SetActive(false);
             LevelCountDeactivate.SetActive(false);
         }

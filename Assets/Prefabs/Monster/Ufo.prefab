@@ -1263,7 +1263,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1000
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1277,7 +1277,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!114 &1012461436676389035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,6 +1423,66 @@ MonoBehaviour:
     rate: 1
   - name: 
     enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 3
+    rate: 2
+  - name: 
+    enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 2
+    rate: 1
+  - name: 
+    enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 2
+    rate: 1
+  - name: 
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
+    count: 1
+    rate: 1
+  - name: 
+    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
+    count: 2
+    rate: 1
+  - name: 
+    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
+    count: 3
+    rate: 1
+  - name: 
+    enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
     count: 1
     rate: 1
   - name: 
@@ -1434,68 +1494,8 @@ MonoBehaviour:
     count: 1
     rate: 1
   - name: 
-    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
-    rate: 1
-  - name: 
     enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
-    count: 1
-    rate: 1
-  - name: 
-    enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: 
     enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
@@ -1515,7 +1515,7 @@ MonoBehaviour:
     rate: 1
   - name: 
     enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: 
     enemy: {fileID: 7035477616513732397, guid: 0361ab17126dad04eb4c4166c332c416, type: 3}
@@ -1531,7 +1531,7 @@ MonoBehaviour:
     rate: 1
   - name: 
     enemy: {fileID: 1321561917949164871, guid: f6d16dc849c9a1842a80b9e0210630c3, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: 
     enemy: {fileID: 5187719855214745621, guid: b9c5b3c1f58652d4494303d95dff54a2, type: 3}
@@ -1547,7 +1547,7 @@ MonoBehaviour:
     rate: 1
   - name: 
     enemy: {fileID: 5738907235412397105, guid: 9910a8d4a269c3241aa1c05e9868948f, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: 
     enemy: {fileID: 5759430704890819772, guid: a1bc58f6db1d33e47935ffb7f7c0e648, type: 3}

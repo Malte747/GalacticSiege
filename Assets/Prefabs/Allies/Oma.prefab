@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79afd3a660b4f4142b47a37e1a04e2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 30
   damageCooldown: 1
 --- !u!114 &2074795422998357235
 MonoBehaviour:
@@ -178,11 +178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.23
+      value: 1.029865
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.005
+      value: -5.7116427
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 7240611789dbe3f4389e8bf820c4046d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -729,7 +729,7 @@ MonoBehaviour:
   - {x: 2.4574099, y: 1.0004711, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -286682
+  m_InstanceId: -536020
   m_LocalBounds:
     m_Center: {x: 0.6418295, y: 5.016479, z: 0}
     m_Extent: {x: 1.8155804, y: 4.016008, z: 0}

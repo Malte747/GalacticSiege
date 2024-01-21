@@ -40,6 +40,7 @@ public class MainMenu : MonoBehaviour
         {
             Destroy(gameObject);
         }
+         SaveLevel();
     }
 
     void Update()

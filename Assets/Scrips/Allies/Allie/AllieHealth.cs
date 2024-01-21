@@ -44,6 +44,8 @@ public class AllieHealth : MonoBehaviour
    } 
    }
 
+
+
      IEnumerator ChangeColorRoutine()
     {
         // Ändere die Farbe aller Renderer auf die Zielfarbe

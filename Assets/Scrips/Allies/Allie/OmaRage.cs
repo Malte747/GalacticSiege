@@ -9,6 +9,7 @@ public class OmaRage : MonoBehaviour
     Allie_Behaviour Allie_Behaviour;
     public bool RageAn = false;
     public Color desiredColor = Color.red;
+ 
 
 
 
@@ -22,12 +23,12 @@ public class OmaRage : MonoBehaviour
   
     void FixedUpdate()
     {
-        if(AllieHealth.health <= 129 && RageAn == false)
+        if(AllieHealth.health <= 249 && RageAn == false)
         {
            RageAn = true;
-           ChangeColorOfChildren(transform);
            Allie_Behaviour.OmaRastet();
         }
+
     }
     void ChangeColorOfChildren(Transform parent)
     {

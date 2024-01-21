@@ -63,7 +63,7 @@ public class EnemyLaser : MonoBehaviour
         {
             hasDealtDamage = true;
             Invoke("ResetDamageCooldown", damageCooldown);
-            allieHealth.TakeDamage(damage + 60);
+            allieHealth.TakeDamage(damage + 90);
         }
     }
 

@@ -126,7 +126,7 @@ public class Allie_Behaviour : MonoBehaviour
     public void OmaRastet()
     {
         AllieAttackDamge = GameObject.Find("hitboxOma").GetComponent<AllieAttackDamge>();
-        moveSpeed = 3f; 
+        moveSpeed = 2.5f; 
         AllieAttackDamge.MoreDmgOma();
        
     }

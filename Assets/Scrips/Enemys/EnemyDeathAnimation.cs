@@ -21,11 +21,8 @@ public class EnemyDeathAnimation : MonoBehaviour
         // Setze die Position des GameObjects auf die aktualisierte Position.
         transform.position = currentPosition;
 
-  
+        Destroy(gameObject, 6.5f);
     }
 
-         public void Update()
-    {
-            Destroy(gameObject, 2f);
-    } 
+
 }

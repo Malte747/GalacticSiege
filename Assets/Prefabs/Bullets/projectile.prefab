@@ -179,9 +179,10 @@ MonoBehaviour:
   speed: 1.5
   rb: {fileID: 7746127340824154656}
   impactEffect: {fileID: 5260914259741140262, guid: 9287bc5a0484e8340bef4d9675dbaf4b, type: 3}
-  lifeTime: 3.5
+  lifeTime: 3.2
   damage: 20
   damageCooldown: 1
+  wingame: {fileID: 0}
 --- !u!95 &5111883680033130025
 Animator:
   serializedVersion: 5
